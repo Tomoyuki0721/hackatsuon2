@@ -1,3 +1,11 @@
 node_modules/
 .DS_Store
 .wrangler/
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# 原本PDF(容量が大きいため、参照用資料としてローカルのみで保持する)
+*.pdf
