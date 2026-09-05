@@ -16,12 +16,12 @@
       "status": "継続",
       "purpose": {
         "value": "本市への移住を促すプロモーションや移住希望者への個別支援を行うとともに，空き家を活用した住まいの情報提供等を行い，移住・定住の促進を図る。",
-        "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": "【目的】本市への移住を促すプロモーションや移住希望者への個別支援を行うとともに，空き家を活用した住まいの情報提供等を行い，移住・定住の促進を図る。" },
+        "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": "【目的】本市への移住を促すプロモーションや移住希望者への個別支援を行うとともに，空き家を活用した住まいの情報提供等を行い，移住・定住の促進を図る。" },
         "confidence": "高"
       },
       "overview": {
         "value": "1.移住・定住支援センター運営業務(総合相談窓口・プロモーション・空き家バンク・お試し移住) 2.ふるさとワーキングホリデー運営事務局業務 3.空き家改修支援事業補助金(補助率1/2)",
-        "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": "【事業内容】１移住・定住支援センター運営業務 ２ふるさとワーキングホリデー運営事務局業務 ３空き家改修支援事業補助金 空き家バンク登録物件の改修及び家財等撤去に係る費用を補助（補助率１/２）" },
+        "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": "【事業内容】１移住・定住支援センター運営業務 ２ふるさとワーキングホリデー運営事務局業務 ３空き家改修支援事業補助金 空き家バンク登録物件の改修及び家財等撤去に係る費用を補助（補助率１/２）" },
         "confidence": "高"
       },
       "budget": {
@@ -37,25 +37,25 @@
       "settlement": {
         "amount": {
           "value": 54554151,
-          "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": "決算額 54,554,151" },
+          "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": "決算額 54,554,151" },
           "confidence": "高"
         },
         "unspent": { "value": null, "citation": null, "confidence": "低" },
         "executionRate": { "value": null, "citation": null, "confidence": "低" }
       },
       "funding": {
-        "nationalGrant": { "value": 11458389, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": "国(県)支出金 11,458,389" }, "confidence": "高" },
+        "nationalGrant": { "value": 11458389, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": "国(県)支出金 11,458,389" }, "confidence": "高" },
         "prefecturalGrant": { "value": 0, "citation": null, "confidence": "中" },
-        "municipalBond": { "value": 0, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": "市債 0" }, "confidence": "高" },
+        "municipalBond": { "value": 0, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": "市債 0" }, "confidence": "高" },
         "fund": { "value": 0, "citation": null, "confidence": "中" },
-        "other": { "value": 0, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": "その他 0" }, "confidence": "高" },
-        "generalFund": { "value": 43095762, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": "一般財源 43,095,762" }, "confidence": "高" }
+        "other": { "value": 0, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": "その他 0" }, "confidence": "高" },
+        "generalFund": { "value": 43095762, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": "一般財源 43,095,762" }, "confidence": "高" }
       },
       "implementation": {
         "mainSubProjects": [
-          { "value": "移住・定住支援センター運営業務(委託先:一般社団法人まるオフィス)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": null }, "confidence": "高" },
-          { "value": "ふるさとワーキングホリデー運営事務局業務(委託先:特定非営利活動法人Cloud JAPAN)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": null }, "confidence": "高" },
-          { "value": "空き家改修支援事業補助金 3,519千円(交付8件)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": "空き家改修支援事業補助金　3,519千円 交付件数8件（所有者2人，利用者6人)" }, "confidence": "高" }
+          { "value": "移住・定住支援センター運営業務(委託先:一般社団法人まるオフィス)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" },
+          { "value": "ふるさとワーキングホリデー運営事務局業務(委託先:特定非営利活動法人Cloud JAPAN)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" },
+          { "value": "空き家改修支援事業補助金 3,519千円(交付8件)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": "空き家改修支援事業補助金　3,519千円 交付件数8件（所有者2人，利用者6人)" }, "confidence": "高" }
         ],
         "newSubProjects": [],
         "expandedSubProjects": [],
@@ -63,26 +63,26 @@
       },
       "outputOutcome": {
         "outputs": [
-          { "label": "相談件数", "value": { "value": "267件", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": null }, "confidence": "高" }, "numericValue": 267 },
-          { "label": "空き家バンク新規物件登録", "value": { "value": "32件(累計139件)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": null }, "confidence": "高" }, "numericValue": 32 },
-          { "label": "空き家バンク新規成約件数", "value": { "value": "18件(累計80件)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": null }, "confidence": "高" }, "numericValue": 18 },
-          { "label": "お試し移住利用", "value": { "value": "27人利用(累計58人、うち移住者8人)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": null }, "confidence": "高" }, "numericValue": 27 },
-          { "label": "ふるさとワーキングホリデー参加", "value": { "value": "103人参加(累計191人、うち移住者20人)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "96", "sourceText": null }, "confidence": "高" }, "numericValue": 103 }
+          { "label": "相談件数", "value": { "value": "267件", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" }, "numericValue": 267 },
+          { "label": "空き家バンク新規物件登録", "value": { "value": "32件(累計139件)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" }, "numericValue": 32 },
+          { "label": "空き家バンク新規成約件数", "value": { "value": "18件(累計80件)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" }, "numericValue": 18 },
+          { "label": "お試し移住利用", "value": { "value": "27人利用(累計58人、うち移住者8人)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" }, "numericValue": 27 },
+          { "label": "ふるさとワーキングホリデー参加", "value": { "value": "103人参加(累計191人、うち移住者20人)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" }, "numericValue": 103 }
         ],
         "outcomes": [
-          { "label": "移住者数(センター経由)", "value": { "value": "47人", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": null }, "confidence": "高" }, "numericValue": 47 }
+          { "label": "移住者数(センター経由)", "value": { "value": "47人", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" }, "numericValue": 47 }
         ],
         "kpiAchievementRate": null,
         "qualitativeOutcome": {
           "value": "移住・定住施策の充実等により、本市が「2023年版 住みたい田舎ベストランキング(宝島社)」東北エリアの総合部門ランキングで東北2位にランクイン。お試し移住・ふるさとワーキングホリデー・空き家バンク等の取組と自然の豊かさ等が評価された。",
-          "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "96", "sourceText": "【成果】移住・定住施策の充実等により，本市が「2023年版 住みたい田舎ベストランキング 宝島社発行」の東北エリア（96自治体が回答）において，総合部門ランキングで東北２位にランクインした。" },
+          "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": "【成果】移住・定住施策の充実等により，本市が「2023年版 住みたい田舎ベストランキング 宝島社発行」の東北エリア（96自治体が回答）において，総合部門ランキングで東北２位にランクインした。" },
           "confidence": "高"
         }
       },
       "issuesAndResponse": {
         "issue": {
           "value": "お試し移住・ふるさとワーキングホリデー等により移住者は増加しているが、若者単身の移住者に比べ世帯移住は少なく、子育て支援施策とあわせて移住先として選ばれるまちとしての戦略的アピールが必要。",
-          "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "96", "sourceText": "【課題】お試し移住やふるさとワーキングホリデー等の実施により，移住・定住支援センターを通じた移住者は増加しているものの，若者を中心とした単身での移住者に比べ，親子などの世帯移住は少なく，子育て支援等の施策とともに，本市が移住先として選ばれるまちとしての戦略的なアピールが必要である。" },
+          "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "26", "sourceText": "【課題】お試し移住やふるさとワーキングホリデー等の実施により，移住・定住支援センターを通じた移住者は増加しているものの，若者を中心とした単身での移住者に比べ，親子などの世帯移住は少なく，子育て支援等の施策とともに，本市が移住先として選ばれるまちとしての戦略的なアピールが必要である。" },
           "confidence": "高"
         },
         "nextYearResponse": { "value": null, "citation": null, "confidence": "低" }
@@ -95,12 +95,12 @@
       "status": "拡充",
       "purpose": {
         "value": "本市への移住を促すプロモーションや移住希望者への個別支援を行うとともに，空き家を活用した住まいの情報提供等を行い，移住・定住の促進を図る。",
-        "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "81～83", "sourceText": null },
+        "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null },
         "confidence": "高"
       },
       "overview": {
         "value": "1.移住・定住支援センター運営業務 2.ふるさとワーキングホリデー運営事務局業務 3.空き家改修支援事業補助金(シェアハウス整備を追加) 4.空き家取得補助金(新設、PR枠2/3) 5.個室ワークブースの設置",
-        "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "81", "sourceText": "３ 空き家改修支援事業補助金（シェアハウス整備を追加）４ 空き家取得補助金 ５ 個室ワークブースの設置" },
+        "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": "３ 空き家改修支援事業補助金（シェアハウス整備を追加）４ 空き家取得補助金 ５ 個室ワークブースの設置" },
         "confidence": "高"
       },
       "budget": {
@@ -108,62 +108,62 @@
         "supplementary": { "value": null, "citation": null, "confidence": "低" },
         "final": {
           "value": 89444000,
-          "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "83", "sourceText": "予算額 89,444,000" },
+          "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": "予算額 89,444,000" },
           "confidence": "高"
         },
         "previousYear": { "value": 68135000, "citation": { "sourceDocument": "R4決算書", "sourcePage": null, "sourceText": null }, "confidence": "中" }
       },
       "settlement": {
-        "amount": { "value": 71906088, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "83", "sourceText": "決算額 71,906,088" }, "confidence": "高" },
+        "amount": { "value": 71906088, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": "決算額 71,906,088" }, "confidence": "高" },
         "unspent": { "value": null, "citation": null, "confidence": "低" },
         "executionRate": { "value": null, "citation": null, "confidence": "低" }
       },
       "funding": {
-        "nationalGrant": { "value": 13474000, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "83", "sourceText": "国(県)支出金 13,474,000" }, "confidence": "高" },
+        "nationalGrant": { "value": 13474000, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": "国(県)支出金 13,474,000" }, "confidence": "高" },
         "prefecturalGrant": { "value": 0, "citation": null, "confidence": "中" },
-        "municipalBond": { "value": 0, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "83", "sourceText": "市債 0" }, "confidence": "高" },
+        "municipalBond": { "value": 0, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": "市債 0" }, "confidence": "高" },
         "fund": { "value": 0, "citation": null, "confidence": "中" },
-        "other": { "value": 0, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "83", "sourceText": "その他 0" }, "confidence": "高" },
-        "generalFund": { "value": 58432088, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "83", "sourceText": "一般財源 58,432,088" }, "confidence": "高" }
+        "other": { "value": 0, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": "その他 0" }, "confidence": "高" },
+        "generalFund": { "value": 58432088, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": "一般財源 58,432,088" }, "confidence": "高" }
       },
       "implementation": {
         "mainSubProjects": [
-          { "value": "移住・定住支援センター運営業務(委託先:一般社団法人まるオフィス)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "81", "sourceText": null }, "confidence": "高" },
-          { "value": "ふるさとワーキングホリデー運営事務局業務(委託先:認定NPO法人Cloud JAPAN)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" },
-          { "value": "空き家改修支援事業補助金 5,936千円(通常分13件、シェアハウス分1件)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" },
-          { "value": "空き家取得補助金 6,000千円(交付5件)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" }
+          { "value": "移住・定住支援センター運営業務(委託先:一般社団法人まるオフィス)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null }, "confidence": "高" },
+          { "value": "ふるさとワーキングホリデー運営事務局業務(委託先:認定NPO法人Cloud JAPAN)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null }, "confidence": "高" },
+          { "value": "空き家改修支援事業補助金 5,936千円(通常分13件、シェアハウス分1件)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null }, "confidence": "高" },
+          { "value": "空き家取得補助金 6,000千円(交付5件)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null }, "confidence": "高" }
         ],
         "newSubProjects": [
-          { "value": "空き家取得補助金(新設、補助率1/2・PR枠2/3)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "81", "sourceText": null }, "confidence": "高" },
-          { "value": "個室ワークブースの設置(まち・ひと・しごと交流プラザ3階にWEB対応集中作業ブース2基)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": "５　個室ワークブースの設置 ・　まち・ひと・しごと交流プラザ３階にWEB対応集中作業ブースを２基設置。" }, "confidence": "高" }
+          { "value": "空き家取得補助金(新設、補助率1/2・PR枠2/3)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null }, "confidence": "高" },
+          { "value": "個室ワークブースの設置(まち・ひと・しごと交流プラザ3階にWEB対応集中作業ブース2基)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": "５　個室ワークブースの設置 ・　まち・ひと・しごと交流プラザ３階にWEB対応集中作業ブースを２基設置。" }, "confidence": "高" }
         ],
         "expandedSubProjects": [
-          { "value": "空き家改修支援事業補助金にシェアハウス整備分を追加", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "81", "sourceText": null }, "confidence": "高" }
+          { "value": "空き家改修支援事業補助金にシェアハウス整備分を追加", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null }, "confidence": "高" }
         ],
         "discontinuedSubProjects": []
       },
       "outputOutcome": {
         "outputs": [
-          { "label": "相談件数", "value": { "value": "384件(うち移住相談216件)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" }, "numericValue": 384 },
-          { "label": "空き家バンク新規物件登録", "value": { "value": "50件(累計220件)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" }, "numericValue": 50 },
-          { "label": "空き家バンク新規成約件数", "value": { "value": "39件(累計128件)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" }, "numericValue": 39 },
-          { "label": "お試し移住利用", "value": { "value": "63人利用(累計178人、うち移住者21人)、うち今年度7人移住", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" }, "numericValue": 63 },
-          { "label": "ふるさとワーキングホリデー参加", "value": { "value": "101人参加(累計394人、うち移住者29人)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" }, "numericValue": 101 }
+          { "label": "相談件数", "value": { "value": "384件(うち移住相談216件)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null }, "confidence": "高" }, "numericValue": 384 },
+          { "label": "空き家バンク新規物件登録", "value": { "value": "50件(累計220件)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null }, "confidence": "高" }, "numericValue": 50 },
+          { "label": "空き家バンク新規成約件数", "value": { "value": "39件(累計128件)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null }, "confidence": "高" }, "numericValue": 39 },
+          { "label": "お試し移住利用", "value": { "value": "63人利用(累計178人、うち移住者21人)、うち今年度7人移住", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null }, "confidence": "高" }, "numericValue": 63 },
+          { "label": "ふるさとワーキングホリデー参加", "value": { "value": "101人参加(累計394人、うち移住者29人)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null }, "confidence": "高" }, "numericValue": 101 }
         ],
         "outcomes": [
-          { "label": "移住者数(センター経由)", "value": { "value": "33人", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" }, "numericValue": 33 }
+          { "label": "移住者数(センター経由)", "value": { "value": "33人", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null }, "confidence": "高" }, "numericValue": 33 }
         ],
         "kpiAchievementRate": null,
         "qualitativeOutcome": {
           "value": "Well-beingプランに盛り込んだ空き家取得補助金の創設と空き家改修支援事業補助金の拡充(シェアハウス補助追加)により、移住・二地域居住希望者や子育て世帯への支援を強化。空き家バンク成約件数39件、お試し移住63人(うち7人移住)、ふるさとワーキングホリデー100人超(うち6人移住)。",
-          "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "83", "sourceText": "【成果】Well-beingプランに盛り込んだ施策である空き家取得補助金の創設と空き家改修支援事業補助金の拡充（シェアハウス補助の追加）の実施により，本市への移住・二地域居住希望者や市内在住の子育て世帯などへの支援の強化を図った。" },
+          "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": "【成果】Well-beingプランに盛り込んだ施策である空き家取得補助金の創設と空き家改修支援事業補助金の拡充（シェアハウス補助の追加）の実施により，本市への移住・二地域居住希望者や市内在住の子育て世帯などへの支援の強化を図った。" },
           "confidence": "高"
         }
       },
       "issuesAndResponse": {
         "issue": {
           "value": "お試し移住の受入れ件数や空き家バンクの登録件数の増加など移住・定住サポート業務が増加しており、移住・定住支援センターの運営体制強化が必要。",
-          "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "83", "sourceText": "【課題】お試し移住の受入れ件数や空き家バンクの登録件数の増加など移住・定住サポートに関する業務が増加していることから，移住・定住支援センターの運営体制強化が必要である。" },
+          "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": "【課題】お試し移住の受入れ件数や空き家バンクの登録件数の増加など移住・定住サポートに関する業務が増加していることから，移住・定住支援センターの運営体制強化が必要である。" },
           "confidence": "高"
         },
         "nextYearResponse": { "value": null, "citation": null, "confidence": "低" }
@@ -172,11 +172,11 @@
         {
           "name": "空き家取得補助金",
           "startYear": "R6",
-          "budget": { "value": 6000000, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": "空き家取得補助金 6,000千円" }, "confidence": "高" },
+          "budget": { "value": 6000000, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": "空き家取得補助金 6,000千円" }, "confidence": "高" },
           "funding": { "value": "一般財源等", "citation": null, "confidence": "低" },
           "purpose": { "value": "空き家バンク登録物件の取得費用の一部を補助し、移住・二地域居住・子育て世帯の住宅確保を後押しする", "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "8", "sourceText": null }, "confidence": "中" },
           "targetAudience": { "value": "移住者・二地域居住者・子育て世帯(市内在住)", "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "8", "sourceText": null }, "confidence": "中" },
-          "content": { "value": "空き家バンク登録物件の取得費用を補助(補助率1/2、PR枠2/3)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "81", "sourceText": null }, "confidence": "高" },
+          "content": { "value": "空き家バンク登録物件の取得費用を補助(補助率1/2、PR枠2/3)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null }, "confidence": "高" },
           "expectedOutcome": { "value": null, "citation": null, "confidence": "低" },
           "label": "NEW"
         }
@@ -188,12 +188,12 @@
       "status": "継続",
       "purpose": {
         "value": "本市への移住を促すプロモーションや移住希望者への個別支援を行うとともに，空き家を活用した住まいの情報提供等を行い，移住・定住の促進を図る。",
-        "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null },
+        "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": null },
         "confidence": "高"
       },
       "overview": {
         "value": "1.移住・定住支援センター運営業務 2.ふるさとワーキングホリデー運営事務局業務 3.空き家改修支援事業補助金 4.空き家取得補助金",
-        "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null },
+        "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": null },
         "confidence": "高"
       },
       "budget": {
@@ -204,27 +204,27 @@
           "citation": { "sourceDocument": "R7決算書", "sourcePage": null, "sourceText": "予算額 87,642,000" },
           "confidence": "高"
         },
-        "previousYear": { "value": 89444000, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "83", "sourceText": null }, "confidence": "高" }
+        "previousYear": { "value": 89444000, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "24", "sourceText": null }, "confidence": "高" }
       },
       "settlement": {
-        "amount": { "value": 69670835, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "80", "sourceText": "決算額 69,670,835" }, "confidence": "高" },
+        "amount": { "value": 69670835, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": "決算額 69,670,835" }, "confidence": "高" },
         "unspent": { "value": null, "citation": null, "confidence": "低" },
         "executionRate": { "value": null, "citation": null, "confidence": "低" }
       },
       "funding": {
-        "nationalGrant": { "value": 10292000, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "80", "sourceText": "国(県)支出金 10,292,000" }, "confidence": "高" },
+        "nationalGrant": { "value": 10292000, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": "国(県)支出金 10,292,000" }, "confidence": "高" },
         "prefecturalGrant": { "value": 0, "citation": null, "confidence": "中" },
-        "municipalBond": { "value": 0, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "80", "sourceText": "市債 0" }, "confidence": "高" },
+        "municipalBond": { "value": 0, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": "市債 0" }, "confidence": "高" },
         "fund": { "value": 0, "citation": null, "confidence": "中" },
-        "other": { "value": 15029000, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "80", "sourceText": "その他 15,029,000" }, "confidence": "高" },
-        "generalFund": { "value": 44349835, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "80", "sourceText": "一般財源 44,349,835" }, "confidence": "高" }
+        "other": { "value": 15029000, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": "その他 15,029,000" }, "confidence": "高" },
+        "generalFund": { "value": 44349835, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": "一般財源 44,349,835" }, "confidence": "高" }
       },
       "implementation": {
         "mainSubProjects": [
           { "value": "移住・定住支援センター運営業務委託 20,703,843円", "citation": { "sourceDocument": "R7決算書", "sourcePage": "79", "sourceText": "移住・定住支援センター運営業務委託 20,703,843" }, "confidence": "高" },
           { "value": "ふるさとワーキングホリデー運営事務局委託 24,146,711円", "citation": { "sourceDocument": "R7決算書", "sourcePage": "79", "sourceText": "ふるさとワーキングホリデー運営事務局委託 24,146,711" }, "confidence": "高" },
-          { "value": "空き家改修支援事業補助金 10,029,000円(通常分12件、シェアハウス分1件)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "80", "sourceText": null }, "confidence": "高" },
-          { "value": "空き家取得補助金 5,000,000円(交付5件、子育て世帯4件・二地域居住者等1件)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "80", "sourceText": null }, "confidence": "高" },
+          { "value": "空き家改修支援事業補助金 10,029,000円(通常分12件、シェアハウス分1件)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" },
+          { "value": "空き家取得補助金 5,000,000円(交付5件、子育て世帯4件・二地域居住者等1件)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" },
           { "value": "移住支援金 8,800,000円", "citation": { "sourceDocument": "R7決算書", "sourcePage": "79", "sourceText": "移住支援金 8,800,000" }, "confidence": "高" }
         ],
         "newSubProjects": [],
@@ -233,26 +233,26 @@
       },
       "outputOutcome": {
         "outputs": [
-          { "label": "相談件数", "value": { "value": "347件(うち移住相談212件)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null }, "confidence": "高" }, "numericValue": 347 },
-          { "label": "空き家バンク新規物件登録", "value": { "value": "44件(累計264件)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null }, "confidence": "高" }, "numericValue": 44 },
-          { "label": "空き家バンク新規成約件数", "value": { "value": "22件(累計150件)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null }, "confidence": "高" }, "numericValue": 22 },
-          { "label": "お試し移住利用", "value": { "value": "62人利用(累計240人、うち移住者30人)、うち今年度6人移住", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null }, "confidence": "高" }, "numericValue": 62 },
-          { "label": "ふるさとワーキングホリデー参加", "value": { "value": "103人参加(累計497人、うち移住者31人)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null }, "confidence": "高" }, "numericValue": 103 }
+          { "label": "相談件数", "value": { "value": "347件(うち移住相談212件)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" }, "numericValue": 347 },
+          { "label": "空き家バンク新規物件登録", "value": { "value": "44件(累計264件)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" }, "numericValue": 44 },
+          { "label": "空き家バンク新規成約件数", "value": { "value": "22件(累計150件)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" }, "numericValue": 22 },
+          { "label": "お試し移住利用", "value": { "value": "62人利用(累計240人、うち移住者30人)、うち今年度6人移住", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" }, "numericValue": 62 },
+          { "label": "ふるさとワーキングホリデー参加", "value": { "value": "103人参加(累計497人、うち移住者31人)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" }, "numericValue": 103 }
         ],
         "outcomes": [
-          { "label": "移住者数(センター経由)", "value": { "value": "35人", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null }, "confidence": "高" }, "numericValue": 35 }
+          { "label": "移住者数(センター経由)", "value": { "value": "35人", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" }, "numericValue": 35 }
         ],
         "kpiAchievementRate": null,
         "qualitativeOutcome": {
           "value": "移住・定住支援センターMINATOを中心に相談対応や空き家バンクの運用が進み、移住相談や成約が継続して発生。お試し移住等参加者から実際の移住につながる事例も生まれ、空き家改修・取得補助金が子育て世帯や二地域居住者の住宅確保を後押しした。",
-          "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "80", "sourceText": "【成果】移住・定住支援センターMINATOを中心に相談対応や空き家バンクの運用が進み，移住相談や成約が継続して発生するなど，移住希望者への支援体制が着実に機能した。" },
+          "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": "【成果】移住・定住支援センターMINATOを中心に相談対応や空き家バンクの運用が進み，移住相談や成約が継続して発生するなど，移住希望者への支援体制が着実に機能した。" },
           "confidence": "高"
         }
       },
       "issuesAndResponse": {
         "issue": {
           "value": "国において令和8年度中の「ふるさと住民登録制度」開始に向けた取組が進められており、地域力の維持・発展を担う「関係人口」創出のため、国の取組と連携を図る必要がある。",
-          "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "80", "sourceText": "【課題】国においても令和８年度中の「ふるさと住民登録制度」開始に向けた取組が進められており，地域力の維持・発展の一翼を担い得る「関係人口」の創出が期待されることから，本市としても国の取組と連携を図っていく必要がある。" },
+          "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "26", "sourceText": "【課題】国においても令和８年度中の「ふるさと住民登録制度」開始に向けた取組が進められており，地域力の維持・発展の一翼を担い得る「関係人口」の創出が期待されることから，本市としても国の取組と連携を図っていく必要がある。" },
           "confidence": "高"
         },
         "nextYearResponse": {

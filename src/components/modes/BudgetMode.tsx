@@ -2,7 +2,12 @@
 
 import { useState } from "react";
 import type { FiscalYear, ProjectData, ProjectYearRecord } from "@/types/project";
-import { findYearRecord, previousYearRecord } from "@/lib/project-helpers";
+import {
+  findYearRecord,
+  previousYearRecord,
+  resolveExecutionRate,
+  resolveUnspent,
+} from "@/lib/project-helpers";
 import { formatPercent, formatSignedPercent, formatYen, growthRate } from "@/lib/format";
 import { SectionCard } from "../ui/SectionCard";
 import { KpiCard } from "../ui/KpiCard";
@@ -49,6 +54,8 @@ export function BudgetMode({
     return <p className="text-sm text-slate-500">選択された年度の予算データがありません。</p>;
   }
   const prev = previousYearRecord(data, selectedYear);
+  const prevExec = prev ? resolveExecutionRate(prev) : { value: null, computed: false };
+  const prevUnspent = prev ? resolveUnspent(prev) : { value: null, computed: false };
 
   const budgetVsPrevSettlement = growthRate(
     current.budget?.initial.value ?? null,
@@ -72,6 +79,8 @@ export function BudgetMode({
         <KpiCard
           label={`${prev?.year ?? "前年度"}執行率`}
           field={prev?.settlement?.executionRate ?? null}
+          value={prevExec.value}
+          computed={prevExec.computed}
           unit="percent"
         />
         <KpiCard
@@ -169,7 +178,7 @@ export function BudgetMode({
       <SectionCard title="注目の論点" className="border-mode-budget/30 bg-blue-50/20">
         <ul className="list-inside list-disc space-y-1.5 text-sm text-slate-700">
           <li>
-            前年度の不用額({formatYen(prev?.settlement?.unspent.value ?? null)})を踏まえた予算額になっているか
+            前年度の不用額({formatYen(prevUnspent.value)})を踏まえた予算額になっているか
           </li>
           <li>新規事業の目標と効果測定方法は明確か</li>
           <li>

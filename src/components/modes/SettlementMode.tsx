@@ -2,7 +2,13 @@
 
 import { useState } from "react";
 import type { FiscalYear, ProjectData, ProjectYearRecord } from "@/types/project";
-import { findYearRecord, latestYearWithSettlement, previousYearRecord } from "@/lib/project-helpers";
+import {
+  findYearRecord,
+  latestYearWithSettlement,
+  previousYearRecord,
+  resolveExecutionRate,
+  resolveUnspent,
+} from "@/lib/project-helpers";
 import { formatPercent, formatYen, unitCost } from "@/lib/format";
 import { SectionCard } from "../ui/SectionCard";
 import { KpiCard } from "../ui/KpiCard";
@@ -43,7 +49,9 @@ export function SettlementMode({
   }
 
   const settlement = current.settlement;
-  const execRate = settlement.executionRate.value;
+  const exec = resolveExecutionRate(current);
+  const execRate = exec.value;
+  const unspent = resolveUnspent(current);
   const prev = previousYearRecord(data, current.year);
 
   const fundingBars = current.funding
@@ -70,7 +78,12 @@ export function SettlementMode({
         <KpiCard label="当初予算" field={current.budget?.initial ?? null} />
         <KpiCard label="最終予算" field={current.budget?.final ?? null} />
         <KpiCard label="決算額" field={settlement.amount} accentClassName="text-mode-settlement" />
-        <KpiCard label="不用額" field={settlement.unspent} />
+        <KpiCard
+          label="不用額"
+          field={settlement.unspent}
+          value={unspent.value}
+          computed={unspent.computed}
+        />
       </div>
 
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
@@ -78,11 +91,17 @@ export function SettlementMode({
           <div className="flex items-center justify-center">
             <ExecutionGauge rate={execRate} />
           </div>
-          <div className="mt-2 text-center">
-            <CitationBadge
-              citation={settlement.executionRate.citation}
-              confidence={settlement.executionRate.confidence}
-            />
+          <div className="mt-2 text-center text-xs">
+            {exec.computed ? (
+              <span className="text-slate-500">
+                決算額 ÷ 最終予算 による計算値(原典に執行率の記載はありません)
+              </span>
+            ) : (
+              <CitationBadge
+                citation={settlement.executionRate.citation}
+                confidence={settlement.executionRate.confidence}
+              />
+            )}
           </div>
         </SectionCard>
 
@@ -130,7 +149,7 @@ export function SettlementMode({
         <ol className="space-y-2 text-sm text-slate-700">
           <li className="flex gap-2">
             <Num n={1} />
-            不用額{formatYen(settlement.unspent.value)}が生じた理由は何か
+            不用額{formatYen(unspent.value)}が生じた理由は何か
           </li>
           <li className="flex gap-2">
             <Num n={2} />
@@ -170,12 +189,14 @@ function Num({ n }: { n: number }) {
 }
 
 function ExecutionTab({ current, prev }: { current: ProjectYearRecord; prev: ProjectYearRecord | null }) {
+  const unspent = resolveUnspent(current);
+  const exec = resolveExecutionRate(current);
   const rows: { label: string; value: number | null }[] = [
     { label: "当初予算", value: current.budget?.initial.value ?? null },
     { label: "補正予算", value: current.budget?.supplementary.value ?? null },
     { label: "最終予算(予算現額)", value: current.budget?.final.value ?? null },
     { label: "決算額", value: current.settlement?.amount.value ?? null },
-    { label: "不用額", value: current.settlement?.unspent.value ?? null },
+    { label: unspent.computed ? "不用額(計算値)" : "不用額", value: unspent.value },
   ];
 
   return (
@@ -194,11 +215,9 @@ function ExecutionTab({ current, prev }: { current: ProjectYearRecord; prev: Pro
           ))}
           <tr>
             <th scope="row" className="py-2 pr-4 text-left font-medium text-slate-600">
-              執行率
+              執行率{exec.computed && "(計算値)"}
             </th>
-            <td className="py-2 text-right font-semibold text-slate-900">
-              {formatPercent(current.settlement?.executionRate.value ?? null)}
-            </td>
+            <td className="py-2 text-right font-semibold text-slate-900">{formatPercent(exec.value)}</td>
           </tr>
         </tbody>
       </table>
@@ -215,8 +234,7 @@ function ExecutionTab({ current, prev }: { current: ProjectYearRecord; prev: Pro
           <div className="flex justify-between">
             <span className="text-slate-600">執行率</span>
             <span className="tabular-nums">
-              {formatPercent(prev.settlement?.executionRate.value ?? null)} →{" "}
-              {formatPercent(current.settlement?.executionRate.value ?? null)}
+              {formatPercent(resolveExecutionRate(prev).value)} → {formatPercent(exec.value)}
             </span>
           </div>
         </div>

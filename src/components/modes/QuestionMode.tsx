@@ -3,7 +3,12 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import type { ProjectData, ProjectYearRecord } from "@/types/project";
-import { sortedYears, latestYearWithSettlement } from "@/lib/project-helpers";
+import {
+  sortedYears,
+  latestYearWithSettlement,
+  resolveExecutionRate,
+  resolveUnspent,
+} from "@/lib/project-helpers";
 import { formatPercent, formatYen } from "@/lib/format";
 import { SectionCard } from "../ui/SectionCard";
 import { StatusBadge } from "../ui/StatusBadge";
@@ -222,7 +227,7 @@ function TimeSeriesTable({ years }: { years: ProjectYearRecord[] }) {
               <td className="py-2 pr-4 tabular-nums">{formatYen(y.budget?.final.value ?? null)}</td>
               <td className="py-2 pr-4 tabular-nums">{formatYen(y.settlement?.amount.value ?? null)}</td>
               <td className="py-2 pr-4 tabular-nums">
-                {formatPercent(y.settlement?.executionRate.value ?? null)}
+                {formatPercent(resolveExecutionRate(y).value)}
               </td>
               <td className="py-2 pr-4 tabular-nums">{formatYen(y.funding?.generalFund.value ?? null)}</td>
               <td className="py-2 pr-4">
@@ -303,15 +308,16 @@ function QuestionDrafts({
   const drafts: { fact: string; factField: ReactNode; question: string }[] = [];
 
   if (latestSettlement?.settlement) {
-    const rate = latestSettlement.settlement.executionRate.value;
+    const rate = resolveExecutionRate(latestSettlement).value;
+    const unspent = resolveUnspent(latestSettlement);
     drafts.push({
-      fact: `${latestSettlement.year}年度の執行率は${formatPercent(rate)}、不用額は${formatYen(
-        latestSettlement.settlement.unspent.value
-      )}でした。`,
+      fact: `${latestSettlement.year}年度の決算額は${formatYen(
+        latestSettlement.settlement.amount.value
+      )}、最終予算に対する執行率は${formatPercent(rate)}、不用額は${formatYen(unspent.value)}でした。`,
       factField: (
         <CitationBadge
-          citation={latestSettlement.settlement.unspent.citation}
-          confidence={latestSettlement.settlement.unspent.confidence}
+          citation={latestSettlement.settlement.amount.citation}
+          confidence={latestSettlement.settlement.amount.confidence}
         />
       ),
       question:

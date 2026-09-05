@@ -33,3 +33,35 @@ export function latestYearWithSettlement(data: ProjectData): ProjectYearRecord |
   const years = sortedYears(data).filter((y) => y.settlement !== null);
   return years.length > 0 ? years[years.length - 1] : null;
 }
+
+/**
+ * 原典に記載があればその値を、無ければ出典のある予算額・決算額から計算した値を返す。
+ * computed=true の場合は「本システムによる計算値」であることを画面に明示すること
+ * (原典に無い数字を、原典にあるかのように見せないため)。
+ */
+export interface DerivedFigure {
+  value: number | null;
+  computed: boolean;
+}
+
+export function resolveUnspent(record: ProjectYearRecord): DerivedFigure {
+  const stated = record.settlement?.unspent.value ?? null;
+  if (stated !== null) return { value: stated, computed: false };
+
+  const budgetFinal = record.budget?.final.value ?? null;
+  const settled = record.settlement?.amount.value ?? null;
+  if (budgetFinal === null || settled === null) return { value: null, computed: false };
+  return { value: budgetFinal - settled, computed: true };
+}
+
+export function resolveExecutionRate(record: ProjectYearRecord): DerivedFigure {
+  const stated = record.settlement?.executionRate.value ?? null;
+  if (stated !== null) return { value: stated, computed: false };
+
+  const budgetFinal = record.budget?.final.value ?? null;
+  const settled = record.settlement?.amount.value ?? null;
+  if (budgetFinal === null || budgetFinal === 0 || settled === null) {
+    return { value: null, computed: false };
+  }
+  return { value: (settled / budgetFinal) * 100, computed: true };
+}

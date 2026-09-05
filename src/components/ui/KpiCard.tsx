@@ -31,17 +31,23 @@ const TREND_ICON: Record<Exclude<Trend, null>, string> = {
 export function KpiCard({
   label,
   field,
+  value: valueOverride,
+  computed = false,
   changePercent,
   unit = "yen",
   accentClassName = "text-slate-900",
 }: {
   label: string;
   field: Sourced<number> | null;
+  /** 原典に無く、出典のある数値から計算した値を表示する場合に渡す */
+  value?: number | null;
+  /** true のとき「計算値」と明示する */
+  computed?: boolean;
   changePercent?: number | null;
   unit?: "yen" | "percent";
   accentClassName?: string;
 }) {
-  const value = field?.value ?? null;
+  const value = valueOverride !== undefined ? valueOverride : (field?.value ?? null);
   const trend = changePercent !== undefined ? trendOf(changePercent ?? null) : null;
   const split = splitValue(value, unit);
 
@@ -57,7 +63,16 @@ export function KpiCard({
         <p className="mt-1 text-lg font-semibold text-slate-400">資料記載なし</p>
       )}
       <div className="mt-1 flex items-center gap-1">
-        <CitationBadge citation={field?.citation ?? null} confidence={field?.confidence ?? "高"} />
+        {computed ? (
+          <span
+            className="rounded border border-slate-300 bg-slate-50 px-1.5 py-0.5 text-[11px] text-slate-500"
+            title="原典に記載がないため、出典のある予算額・決算額から本システムが計算した値です"
+          >
+            計算値
+          </span>
+        ) : (
+          <CitationBadge citation={field?.citation ?? null} confidence={field?.confidence ?? "高"} />
+        )}
         {changePercent !== undefined && trend && (
           <span
             className={`inline-flex items-center gap-0.5 text-xs font-semibold ${
