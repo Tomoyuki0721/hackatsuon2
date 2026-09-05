@@ -55,9 +55,9 @@ export function ProjectView({
 
       <main className="mx-auto max-w-6xl px-4 py-6 sm:px-6">
         {mode === "budget" && <BudgetMode data={data} detail={detail} selectedYear={year} />}
-        {mode === "settlement" && <SettlementMode data={data} detail={detail} />}
+        {mode === "settlement" && <SettlementMode data={data} detail={detail} selectedYear={year} />}
         {mode === "question" && <QuestionMode data={data} detail={detail} />}
-        {mode === "citizen" && <CitizenMode data={data} detail={detail} />}
+        {mode === "citizen" && <CitizenMode data={data} detail={detail} selectedYear={year} />}
       </main>
     </div>
   );

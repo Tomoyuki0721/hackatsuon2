@@ -64,13 +64,14 @@
       "outputOutcome": {
         "outputs": [
           { "label": "相談件数", "value": { "value": "267件", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": null }, "confidence": "高" }, "numericValue": 267 },
-          { "label": "移住者数(センター経由)", "value": { "value": "47人", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": null }, "confidence": "高" }, "numericValue": 47 },
           { "label": "空き家バンク新規物件登録", "value": { "value": "32件(累計139件)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": null }, "confidence": "高" }, "numericValue": 32 },
           { "label": "空き家バンク新規成約件数", "value": { "value": "18件(累計80件)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": null }, "confidence": "高" }, "numericValue": 18 },
           { "label": "お試し移住利用", "value": { "value": "27人利用(累計58人、うち移住者8人)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": null }, "confidence": "高" }, "numericValue": 27 },
           { "label": "ふるさとワーキングホリデー参加", "value": { "value": "103人参加(累計191人、うち移住者20人)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "96", "sourceText": null }, "confidence": "高" }, "numericValue": 103 }
         ],
-        "outcomes": [],
+        "outcomes": [
+          { "label": "移住者数(センター経由)", "value": { "value": "47人", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "95", "sourceText": null }, "confidence": "高" }, "numericValue": 47 }
+        ],
         "kpiAchievementRate": null,
         "qualitativeOutcome": {
           "value": "移住・定住施策の充実等により、本市が「2023年版 住みたい田舎ベストランキング(宝島社)」東北エリアの総合部門ランキングで東北2位にランクイン。お試し移住・ふるさとワーキングホリデー・空き家バンク等の取組と自然の豊かさ等が評価された。",
@@ -144,13 +145,14 @@
       "outputOutcome": {
         "outputs": [
           { "label": "相談件数", "value": { "value": "384件(うち移住相談216件)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" }, "numericValue": 384 },
-          { "label": "移住者数(センター経由)", "value": { "value": "33人", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" }, "numericValue": 33 },
           { "label": "空き家バンク新規物件登録", "value": { "value": "50件(累計220件)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" }, "numericValue": 50 },
           { "label": "空き家バンク新規成約件数", "value": { "value": "39件(累計128件)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" }, "numericValue": 39 },
           { "label": "お試し移住利用", "value": { "value": "63人利用(累計178人、うち移住者21人)、うち今年度7人移住", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" }, "numericValue": 63 },
           { "label": "ふるさとワーキングホリデー参加", "value": { "value": "101人参加(累計394人、うち移住者29人)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" }, "numericValue": 101 }
         ],
-        "outcomes": [],
+        "outcomes": [
+          { "label": "移住者数(センター経由)", "value": { "value": "33人", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "82", "sourceText": null }, "confidence": "高" }, "numericValue": 33 }
+        ],
         "kpiAchievementRate": null,
         "qualitativeOutcome": {
           "value": "Well-beingプランに盛り込んだ空き家取得補助金の創設と空き家改修支援事業補助金の拡充(シェアハウス補助追加)により、移住・二地域居住希望者や子育て世帯への支援を強化。空き家バンク成約件数39件、お試し移住63人(うち7人移住)、ふるさとワーキングホリデー100人超(うち6人移住)。",
@@ -232,13 +234,14 @@
       "outputOutcome": {
         "outputs": [
           { "label": "相談件数", "value": { "value": "347件(うち移住相談212件)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null }, "confidence": "高" }, "numericValue": 347 },
-          { "label": "移住者数(センター経由)", "value": { "value": "35人", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null }, "confidence": "高" }, "numericValue": 35 },
           { "label": "空き家バンク新規物件登録", "value": { "value": "44件(累計264件)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null }, "confidence": "高" }, "numericValue": 44 },
           { "label": "空き家バンク新規成約件数", "value": { "value": "22件(累計150件)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null }, "confidence": "高" }, "numericValue": 22 },
           { "label": "お試し移住利用", "value": { "value": "62人利用(累計240人、うち移住者30人)、うち今年度6人移住", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null }, "confidence": "高" }, "numericValue": 62 },
           { "label": "ふるさとワーキングホリデー参加", "value": { "value": "103人参加(累計497人、うち移住者31人)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null }, "confidence": "高" }, "numericValue": 103 }
         ],
-        "outcomes": [],
+        "outcomes": [
+          { "label": "移住者数(センター経由)", "value": { "value": "35人", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "79", "sourceText": null }, "confidence": "高" }, "numericValue": 35 }
+        ],
         "kpiAchievementRate": null,
         "qualitativeOutcome": {
           "value": "移住・定住支援センターMINATOを中心に相談対応や空き家バンクの運用が進み、移住相談や成約が継続して発生。お試し移住等参加者から実際の移住につながる事例も生まれ、空き家改修・取得補助金が子育て世帯や二地域居住者の住宅確保を後押しした。",
