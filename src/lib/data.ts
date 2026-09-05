@@ -28,6 +28,13 @@ export function getProjectData(projectId: string): ProjectData | null {
   return JSON.parse(raw) as ProjectData;
 }
 
+/** 全事業データ。ビルド時にトップページの横断分析で使う。 */
+export function getAllProjects(): ProjectData[] {
+  return getAllProjectIds()
+    .map((id) => getProjectData(id))
+    .filter((p): p is ProjectData => p !== null);
+}
+
 export function getAllProjectSummaries(): ProjectSummary[] {
   return getAllProjectIds()
     .map((id) => getProjectData(id))

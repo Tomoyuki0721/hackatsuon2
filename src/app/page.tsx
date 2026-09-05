@@ -1,57 +1,46 @@
-import Link from "next/link";
-import { getAllProjectSummaries } from "@/lib/data";
+import { getAllProjects } from "@/lib/data";
+import { analyzeProject, buildSpotlights } from "@/lib/analysis";
 import { AppShell } from "@/components/layout/AppShell";
+import { ProjectSearch } from "@/components/home/ProjectSearch";
+import { Spotlights } from "@/components/home/Spotlights";
 
 /**
- * トップページ: 事業一覧(現時点では移住・定住促進事業のみ)。
- * 検索・自動抽出スポットライト(新規事業/予算増減/執行率低下等)は
- * 事業データが複数件揃った段階で実装する(現状は「準備中」と明示する)。
+ * トップページ。ビルド時に全事業を読み込んで横断分析を行い、
+ * 検索・絞り込み(クライアント側)と自動抽出(静的)を表示する。
  */
 export default function HomePage() {
-  const projects = getAllProjectSummaries();
-  const defaultProjectId = projects[0]?.projectId ?? null;
+  const projects = getAllProjects();
+  const analyses = projects.map(analyzeProject);
+  const spotlights = buildSpotlights(analyses);
+  const defaultProjectId = analyses[0]?.projectId ?? null;
 
   return (
     <AppShell defaultProjectId={defaultProjectId}>
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
         <h1 className="text-2xl font-bold text-slate-900">気仙沼市 政策・予算ダッシュボード</h1>
-        <p className="mt-2 text-sm text-slate-600">
-          予算・決算・主要施策の成果を事業単位で結びつけ、経年でどう変化してきたかを見るためのサイトです。
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
+          予算・決算・主要施策の成果を事業単位で結び付け、年度をまたいで政策がどう変わってきたかを見るためのサイトです。
+          表示している数値はすべて市の公開資料が出典で、資料に記載が無いものは「資料記載なし」と明示しています。
         </p>
 
         <section className="mt-8">
-          <h2 className="mb-3 text-sm font-bold text-slate-700">事業一覧</h2>
-          {projects.length === 0 ? (
-            <p className="text-sm text-slate-500">準備中: 事業データがまだ登録されていません。</p>
-          ) : (
-            <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-              {projects.map((p) => (
-                <li key={p.projectId}>
-                  <Link
-                    href={`/projects/${p.projectId}/`}
-                    className="block rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-mode-budget hover:shadow-md"
-                  >
-                    <p className="text-xs text-slate-500">{p.department}</p>
-                    <p className="mt-1 font-semibold text-slate-900">{p.canonicalName}</p>
-                    <p className="mt-1 text-xs text-slate-400">{p.budgetCategory}</p>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
+          <h2 className="mb-3 text-sm font-bold text-slate-700">事業を探す</h2>
+          <ProjectSearch analyses={analyses} />
         </section>
 
-        <section className="mt-10 rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-5">
-          <h2 className="mb-2 text-sm font-bold text-slate-600">今後追加予定の分析(準備中)</h2>
-          <ul className="list-inside list-disc space-y-1 text-sm text-slate-500">
-            <li>今年の新規事業</li>
-            <li>予算が大きく増えた/減った事業</li>
-            <li>執行率が低い事業</li>
-            <li>成果指標が悪化した事業</li>
-            <li>一般財源負担が増えた事業</li>
-            <li>3年連続で課題として記載されている事業</li>
-          </ul>
+        <section className="mt-10">
+          <h2 className="mb-1 text-sm font-bold text-slate-700">気になる動きを自動で抽出</h2>
+          <p className="mb-3 text-xs text-slate-400">
+            出典のある予算額・決算額・成果指標から本システムが計算した結果です。判断そのものではなく、
+            確認すべき事業を見つけるための手がかりとしてご覧ください。
+          </p>
+          <Spotlights spotlights={spotlights} />
         </section>
+
+        <p className="mt-10 text-xs leading-relaxed text-slate-400">
+          ※ 現在 {analyses.length} 事業を登録しています。対象年度は令和4・6・7・8年度で、
+          令和5年度は資料が存在しないため欠落年度として扱っています(補間していません)。
+        </p>
       </div>
     </AppShell>
   );
