@@ -28,9 +28,13 @@ export function previousYearRecord(data: ProjectData, year: FiscalYear): Project
   return years[idx - 1];
 }
 
-/** 決算データ(settlement)が実際に存在する最新年度。未来年度(予算のみ)は対象外。 */
+/**
+ * 決算額が実際に判明している最新年度。未来年度(予算のみ)は対象外。
+ * settlementオブジェクトが存在しても決算額がnullなら「決算なし」として扱う
+ * (中身が空のまま決算モードを表示してしまわないようにするため)。
+ */
 export function latestYearWithSettlement(data: ProjectData): ProjectYearRecord | null {
-  const years = sortedYears(data).filter((y) => y.settlement !== null);
+  const years = sortedYears(data).filter((y) => y.settlement?.amount.value != null);
   return years.length > 0 ? years[years.length - 1] : null;
 }
 

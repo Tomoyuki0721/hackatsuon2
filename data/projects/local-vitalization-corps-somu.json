@@ -1,0 +1,292 @@
+{
+  "master": {
+    "projectId": "local-vitalization-corps-somu",
+    "canonicalName": "地域おこし協力隊事業(企画調査費)",
+    "aliases": ["地域おこし協力隊事業"],
+    "department": "震災復興・企画部",
+    "section": "震災復興・企画課",
+    "policyCategory": "Ⅰ－１ 対話・共創・協働（１）①産業人材・まちづくり人材の育成，対話・共創の場の活用",
+    "budgetCategory": "2款1項7目(企画調査費)",
+    "notes": "同名の「地域おこし協力隊事業」が5款1項2目(労働諸費/産業部産業戦略課)および7款2項1目(観光総務費/産業部観光課)にも存在するが、所管課・予算科目・事業内容が異なるため、matching-rules.mdの規則に従い別事業として扱う(本ファイルは2款1項7目 企画調査費のもの)。なお隊員の活動に係る「地域おこし協力隊事業業務委託料」は各事業担当課で予算計上されている旨が成果報告書に明記されている。"
+  },
+  "years": [
+    {
+      "year": "R4",
+      "yearlyLabel": "地域おこし協力隊事業",
+      "status": "継続",
+      "purpose": {
+        "value": "人口減少及び高齢化の進行が著しい本市において，都市住民など地域外の人材を地域社会の新たな担い手（地域おこし協力隊）として受け入れ，地域力の維持・強化とともに，地域おこし協力隊員の定住化を促進する。",
+        "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "【目的】人口減少及び高齢化の進行が著しい本市において，都市住民など地域外の人材を地域社会の新たな担い手（地域おこし協力隊）として受け入れ，地域力の維持・強化とともに，地域おこし協力隊員の定住化を促進する。" },
+        "confidence": "高"
+      },
+      "overview": {
+        "value": "1.地域おこし協力隊募集 2.地域おこし協力隊の任用",
+        "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "【事業内容】１　地域おこし協力隊募集 ２　地域おこし協力隊の任用" },
+        "confidence": "高"
+      },
+      "budget": {
+        "initial": { "value": null, "citation": null, "confidence": "低" },
+        "supplementary": { "value": null, "citation": null, "confidence": "低" },
+        "final": {
+          "value": 49968000,
+          "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "予算の執行状況 予算額 49,968,000" },
+          "confidence": "高"
+        },
+        "previousYear": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "settlement": {
+        "amount": { "value": 43976394, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "決算額 43,976,394" }, "confidence": "高" },
+        "unspent": { "value": null, "citation": null, "confidence": "低" },
+        "executionRate": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "funding": {
+        "nationalGrant": { "value": 0, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "国(県)支出金 0" }, "confidence": "高" },
+        "prefecturalGrant": { "value": 0, "citation": null, "confidence": "中" },
+        "municipalBond": { "value": 0, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "市債 0" }, "confidence": "高" },
+        "fund": { "value": 0, "citation": null, "confidence": "中" },
+        "other": { "value": 0, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "その他 0" }, "confidence": "高" },
+        "generalFund": { "value": 43976394, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "一般財源 43,976,394" }, "confidence": "高" }
+      },
+      "implementation": {
+        "mainSubProjects": [
+          { "value": "地域おこし協力隊の募集(気仙沼まち大学運営協議会2人、一般社団法人まるオフィス2人、気仙沼地域エネルギー開発株式会社1人、農事組合法人モーランド1人、気仙沼水産資源活用研究会1人)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "１　地域おこし協力隊募集（令和４年度中の募集人数）" }, "confidence": "高" },
+          { "value": "地域おこし協力隊の任用(9事業・8受入団体、隊員数合計13人)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "２　地域おこし協力隊の任用状況 合計 13人" }, "confidence": "高" }
+        ],
+        "newSubProjects": [],
+        "expandedSubProjects": [],
+        "discontinuedSubProjects": []
+      },
+      "outputOutcome": {
+        "outputs": [
+          { "label": "地域おこし協力隊 隊員数", "value": { "value": "13人", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "合計 13人" }, "confidence": "高" }, "numericValue": 13 },
+          { "label": "隊員活動報告会の実施", "value": { "value": "2回", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "地域おこし協力隊の隊員活動報告会を２回実施し" }, "confidence": "高" }, "numericValue": 2 }
+        ],
+        "outcomes": [
+          { "label": "退任隊員のうち定住した人数", "value": { "value": "1人(退任4人中)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "令和４年度中に退任した隊員４人のうち１人が定住した。" }, "confidence": "高" }, "numericValue": 1 }
+        ],
+        "kpiAchievementRate": null,
+        "qualitativeOutcome": {
+          "value": "令和4年度中に退任した隊員4人のうち1人が定住した。地域おこし協力隊の隊員活動報告会を2回実施し、それぞれの分野で活動する隊員同士の活動の内容や悩み等を互いに話し、情報共有する場を設けた。活動報告会では隊員間の交流も図られ、隊員のモチベーションの向上や新たな隊員同士のつながりが生まれた。",
+          "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "【成果】・令和４年度中に退任した隊員４人のうち１人が定住した。・地域おこし協力隊の隊員活動報告会を２回実施し，それぞれの分野で活動する隊員同士の活動の内容や悩み等を互いに話し，情報共有する場を設けた。活動報告会では隊員間の交流も図られ，隊員のモチベーションの向上や新たな隊員同士のつながりが生まれた。" },
+          "confidence": "高"
+        }
+      },
+      "issuesAndResponse": {
+        "issue": {
+          "value": "別の企業等への就労希望などから任期途中での退任も見られ、より一層定住率を上げていくことが課題である。",
+          "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": "【課題】別の企業等への就労希望などから任期途中での退任も見られ，より一層定住率を上げていくことが課題である。" },
+          "confidence": "高"
+        },
+        "nextYearResponse": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "newInitiatives": []
+    },
+    {
+      "year": "R6",
+      "yearlyLabel": "地域おこし協力隊事業",
+      "status": "継続",
+      "purpose": {
+        "value": "人口減少及び高齢化の進行が著しい本市において，都市住民など地域外の人材を地域社会の新たな担い手（地域おこし協力隊）として受け入れ，地域力の維持・強化とともに，地域おこし協力隊員の定住化を促進する。",
+        "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": null },
+        "confidence": "高"
+      },
+      "overview": {
+        "value": "1.地域おこし協力隊募集 2.地域おこし協力隊の任用・受入れ",
+        "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": null },
+        "confidence": "高"
+      },
+      "budget": {
+        "initial": { "value": null, "citation": null, "confidence": "低" },
+        "supplementary": { "value": null, "citation": null, "confidence": "低" },
+        "final": {
+          "value": 23269000,
+          "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "予算の執行状況 予算額 23,269,000" },
+          "confidence": "高"
+        },
+        "previousYear": { "value": 49968000, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "28", "sourceText": null }, "confidence": "中" }
+      },
+      "settlement": {
+        "amount": { "value": 17856482, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "決算額 17,856,482" }, "confidence": "高" },
+        "unspent": { "value": null, "citation": null, "confidence": "低" },
+        "executionRate": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "funding": {
+        "nationalGrant": { "value": 0, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "国(県)支出金 0" }, "confidence": "高" },
+        "prefecturalGrant": { "value": 0, "citation": null, "confidence": "中" },
+        "municipalBond": { "value": 0, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "市債 0" }, "confidence": "高" },
+        "fund": { "value": 0, "citation": null, "confidence": "中" },
+        "other": { "value": 0, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "その他 0" }, "confidence": "高" },
+        "generalFund": { "value": 17856482, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "一般財源 17,856,482" }, "confidence": "高" }
+      },
+      "implementation": {
+        "mainSubProjects": [
+          { "value": "人材育成プラットフォーム推進事業(受入団体:気仙沼まち大学運営協議会) 隊員3人(前年度からの継続3人)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "(1) 人材育成プラットフォーム推進事業　ア　受入団体　気仙沼まち大学運営協議会　イ　隊 員 数　３人（前年度からの継続３人）" }, "confidence": "高" },
+          { "value": "移住・定住促進事業(受入団体:一般社団法人まるオフィス) 隊員1人(前年度からの継続1人)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "(2) 移住・定住促進事業　ア　受入団体　一般社団法人まるオフィス　イ　隊 員 数　１人（前年度からの継続１人）" }, "confidence": "高" },
+          { "value": "ＵＩＪターン定住促進事業(受入団体:認定NPO法人Cloud JAPAN) 隊員1人(新規1人)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "(3) ＵＩＪターン定住促進事業　ア　受入団体　認定ＮＰＯ法人Cloud JAPAN　イ　隊 員 数　１人（新規１人）" }, "confidence": "高" },
+          { "value": "地域おこし協力隊起業支援補助金 1,368千円(交付2件)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "３　地域おこし協力隊起業支援補助金　　２件　1,368千円" }, "confidence": "高" }
+        ],
+        "newSubProjects": [],
+        "expandedSubProjects": [],
+        "discontinuedSubProjects": []
+      },
+      "outputOutcome": {
+        "outputs": [
+          { "label": "地域おこし協力隊 隊員数", "value": { "value": "5人(人材育成PF3人・移住定住1人・UIJターン1人)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "高" }, "numericValue": 5 },
+          { "label": "起業支援補助金 交付件数", "value": { "value": "2件(1,368千円)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "３　地域おこし協力隊起業支援補助金　　２件　1,368千円" }, "confidence": "高" }, "numericValue": 2 },
+          { "label": "退任した隊員数", "value": { "value": "2人(気仙沼まち大学運営協議会)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "２　地域おこし協力隊退任状況　気仙沼まち大学運営協議会　２人（Ｒ６.４.30退任，Ｒ６.７.31退任）" }, "confidence": "高" }, "numericValue": 2 }
+        ],
+        "outcomes": [
+          { "label": "退任隊員のうち定住した人数", "value": { "value": "1人(退任2人中)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "令和６年度中に退任した隊員２人のうち，１人が本市へ定住した。" }, "confidence": "高" }, "numericValue": 1 }
+        ],
+        "kpiAchievementRate": null,
+        "qualitativeOutcome": {
+          "value": "委託団体の支援の下、各協力隊員が団体での活動を通した地域おこしに貢献している。また、令和6年度中に退任した隊員2人のうち、1人が本市へ定住した。",
+          "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "【成果】委託団体の支援の下，各協力隊員が団体での活動を通した地域おこしに貢献している。また，令和６年度中に退任した隊員２人のうち，１人が本市へ定住した。" },
+          "confidence": "高"
+        }
+      },
+      "issuesAndResponse": {
+        "issue": {
+          "value": "協力隊の募集に際し、活動内容に合致する人材確保ができるよう、委託団体との連携による募集方法等の工夫が必要である。",
+          "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": "【課題】協力隊の募集に際し，活動内容に合致する人材確保ができるよう，委託団体との連携による募集方法等の工夫が必要である。" },
+          "confidence": "高"
+        },
+        "nextYearResponse": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "newInitiatives": []
+    },
+    {
+      "year": "R7",
+      "yearlyLabel": "地域おこし協力隊事業",
+      "status": "継続",
+      "purpose": {
+        "value": "人口減少及び高齢化の進行が著しい本市において，都市住民など地域外の人材を地域社会の新たな担い手（地域おこし協力隊）として受け入れ，地域力の維持・強化とともに，地域おこし協力隊員の定住化を促進する。",
+        "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "【目的】人口減少及び高齢化の進行が著しい本市において，都市住民など地域外の人材を地域社会の新たな担い手（地域おこし協力隊）として受け入れ，地域力の維持・強化とともに，地域おこし協力隊員の定住化を促進する。" },
+        "confidence": "高"
+      },
+      "overview": {
+        "value": "1.地域おこし協力隊募集 2.地域おこし協力隊の任用・受入れ",
+        "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "【事業内容】１　地域おこし協力隊募集 ２　地域おこし協力隊の任用・受入れ" },
+        "confidence": "高"
+      },
+      "budget": {
+        "initial": { "value": null, "citation": null, "confidence": "低" },
+        "supplementary": { "value": null, "citation": null, "confidence": "低" },
+        "final": {
+          "value": 24743000,
+          "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "予算の執行状況 予算額 24,743,000" },
+          "confidence": "高"
+        },
+        "previousYear": { "value": 23269000, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "26", "sourceText": null }, "confidence": "中" }
+      },
+      "settlement": {
+        "amount": { "value": 19179946, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "決算額 19,179,946" }, "confidence": "高" },
+        "unspent": { "value": null, "citation": null, "confidence": "低" },
+        "executionRate": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "funding": {
+        "nationalGrant": { "value": 0, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "国(県)支出金 0" }, "confidence": "高" },
+        "prefecturalGrant": { "value": 0, "citation": null, "confidence": "中" },
+        "municipalBond": { "value": 0, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "市債 0" }, "confidence": "高" },
+        "fund": { "value": 0, "citation": null, "confidence": "中" },
+        "other": { "value": 0, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "その他 0" }, "confidence": "高" },
+        "generalFund": { "value": 19179946, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "一般財源 19,179,946" }, "confidence": "高" }
+      },
+      "implementation": {
+        "mainSubProjects": [
+          { "value": "人材育成プラットフォーム推進事業(受入団体:気仙沼まち大学運営協議会) 隊員2人(新規1人・前年度からの継続1人)。「気仙沼まち大学構想」推進、コワーキングスペース□shipの管理・運営など", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "(1) 人材育成プラットフォーム推進事業　ア　受入団体　気仙沼まち大学運営協議会　イ　隊 員 数　２人（新規１人，前年度からの継続１人）" }, "confidence": "高" },
+          { "value": "移住・定住促進事業(受入団体:一般社団法人まるオフィス) 隊員1人(前年度からの継続1人)。移住・定住支援センターMINATOのスタッフとして移住相談対応・広報担当業務", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "(2) 移住・定住促進事業　ア　受入団体　一般社団法人まるオフィス　イ　隊 員 数　１人（前年度からの継続１人）" }, "confidence": "高" },
+          { "value": "ＵＩＪターン定住促進事業(受入団体:認定NPO法人Cloud JAPAN) 隊員1人(前年度からの継続1人)。ふるさとワーキングホリデーの連携事業企画立案、移住者交流イベント等", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "(3) ＵＩＪターン定住促進事業　ア　受入団体　認定ＮＰＯ法人Cloud JAPAN　イ　隊 員 数　１人（前年度からの継続１人）" }, "confidence": "高" },
+          { "value": "地域おこし協力隊起業支援事業補助金 2,458千円(交付3件)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "３　地域おこし協力隊起業支援事業補助金　　３件　2,458千円" }, "confidence": "高" }
+        ],
+        "newSubProjects": [],
+        "expandedSubProjects": [],
+        "discontinuedSubProjects": []
+      },
+      "outputOutcome": {
+        "outputs": [
+          { "label": "地域おこし協力隊 隊員数", "value": { "value": "4人(人材育成PF2人・移住定住1人・UIJターン1人)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": null }, "confidence": "高" }, "numericValue": 4 },
+          { "label": "起業支援補助金 交付件数", "value": { "value": "3件(2,458千円)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "３　地域おこし協力隊起業支援事業補助金　　３件　2,458千円" }, "confidence": "高" }, "numericValue": 3 },
+          { "label": "退任した隊員数", "value": { "value": "1人(一般社団法人まるオフィス、令和7年9月26日退任)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "２　地域おこし協力隊退任状況　一般社団法人まるオフィス　１人（令和７年９月26日退任）" }, "confidence": "高" }, "numericValue": 1 }
+        ],
+        "outcomes": [
+          { "label": "退任隊員のうち定住した人数", "value": { "value": "1人(退任1人中)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "令和７年度に退任した隊員１人が市内に定住した。" }, "confidence": "高" }, "numericValue": 1 }
+        ],
+        "kpiAchievementRate": null,
+        "qualitativeOutcome": {
+          "value": "各協力隊員が委託団体の支援を受けながら、それぞれの受入団体での活動を通して地域課題の解決や地域活性化に貢献している。また、令和7年度に退任した隊員1人が市内に定住した。",
+          "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "【成果】各協力隊員が委託団体の支援を受けながら，それぞれの受入団体での活動を通して地域課題の解決や地域活性化に貢献している。また，令和７年度に退任した隊員１人が市内に定住した。" },
+          "confidence": "高"
+        }
+      },
+      "issuesAndResponse": {
+        "issue": {
+          "value": "委託団体と連携しながら、活動内容に適性を持った人材を確保できるように、募集方法等を工夫する必要がある。",
+          "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": "【課題】委託団体と連携しながら，活動内容に適性を持った人材を確保できるように，募集方法等を工夫する必要がある。" },
+          "confidence": "高"
+        },
+        "nextYearResponse": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "newInitiatives": []
+    },
+    {
+      "year": "R8",
+      "yearlyLabel": "地域おこし協力隊事業",
+      "status": "継続",
+      "_note_budget_scope": "R8予算説明資料の本事業シートは全款横断(2款・5款・6款・7款・10款)で作成されており、財源内訳に記載された一般財源104,992千円は全款の合計とみられる。本ファイルが対象とする2款1項7目 企画調査費の予算額として、同シートの予算科目欄に明記された35,468千円を採用した。他款分の内訳は同資料からは特定できないため計上していない(推測での按分は行わない)。",
+      "purpose": {
+        "value": "人口減少及び高齢化の進行が著しい本市において，都市住民など地域外の人材を地域社会の新たな担い手（地域おこし協力隊）として受け入れ，地域力の維持・強化とともに，地域おこし協力隊員の定住化を促進し，社会増を図る。",
+        "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "10", "sourceText": "１ 目 的　人口減少及び高齢化の進行が著しい本市において，都市住民など地域外の人材を地域社会の新たな担い手（地域おこし協力隊）として受け入れ，地域力の維持・強化とともに，地域おこし協力隊員の定住化を促進し，社会増を図る。" },
+        "confidence": "高"
+      },
+      "overview": {
+        "value": "1.都市住民を地域おこし協力隊員として委嘱し、地域の活性化等に資するプロジェクトを行う団体で活動する 2.退任日の前後1年以内に起業する隊員に対して起業に要する費用を補助する",
+        "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "10", "sourceText": "２ 内 容 (1) 都市住民を地域おこし協力隊員として委嘱し，地域の活性化等に資するプロジェクトを行う団体で活動する。(2) 退任日の前後１年以内に起業する隊員に対して，起業に要する費用を補助する。" },
+        "confidence": "高"
+      },
+      "budget": {
+        "initial": {
+          "value": 35468000,
+          "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "10", "sourceText": "予 算 科 目 ２款 １項 ７目 企画調査費　予算額 35,468千円" },
+          "confidence": "中"
+        },
+        "supplementary": { "value": null, "citation": null, "confidence": "低" },
+        "final": {
+          "value": 35468000,
+          "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "10", "sourceText": "予 算 科 目 ２款 １項 ７目 企画調査費　予算額 35,468千円" },
+          "confidence": "中"
+        },
+        "previousYear": { "value": 24743000, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "28", "sourceText": null }, "confidence": "中" }
+      },
+      "settlement": null,
+      "funding": {
+        "nationalGrant": { "value": null, "citation": null, "confidence": "低" },
+        "prefecturalGrant": { "value": null, "citation": null, "confidence": "低" },
+        "municipalBond": { "value": null, "citation": null, "confidence": "低" },
+        "fund": { "value": null, "citation": null, "confidence": "低" },
+        "other": { "value": null, "citation": null, "confidence": "低" },
+        "generalFund": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "implementation": {
+        "mainSubProjects": [
+          { "value": "地域おこし協力隊員の委嘱(都市住民を委嘱し、地域の活性化等に資するプロジェクトを行う団体で活動)", "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "10", "sourceText": "(1) 都市住民を地域おこし協力隊員として委嘱し，地域の活性化等に資するプロジェクトを行う団体で活動する。" }, "confidence": "高" },
+          { "value": "地域おこし協力隊起業支援事業補助金(補助率1/2、初年度上限1,000千円・次年度上限500千円)", "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "10", "sourceText": "(2) 退任日の前後１年以内に起業する隊員に対して，起業に要する費用を補助する。・補助率1/2（初年度：上限1,000千円，次年度：上限500千円）" }, "confidence": "高" }
+        ],
+        "newSubProjects": [],
+        "expandedSubProjects": [],
+        "discontinuedSubProjects": []
+      },
+      "outputOutcome": {
+        "outputs": [],
+        "outcomes": [],
+        "kpiAchievementRate": null,
+        "qualitativeOutcome": null
+      },
+      "issuesAndResponse": {
+        "issue": { "value": null, "citation": null, "confidence": "低" },
+        "nextYearResponse": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "newInitiatives": []
+    }
+  ]
+}

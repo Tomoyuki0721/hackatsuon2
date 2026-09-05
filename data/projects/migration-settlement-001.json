@@ -291,11 +291,7 @@
         },
         "previousYear": { "value": 87642000, "citation": { "sourceDocument": "R7決算書", "sourcePage": null, "sourceText": null }, "confidence": "高" }
       },
-      "settlement": {
-        "amount": { "value": null, "citation": null, "confidence": "低" },
-        "unspent": { "value": null, "citation": null, "confidence": "低" },
-        "executionRate": { "value": null, "citation": null, "confidence": "低" }
-      },
+      "settlement": null,
       "funding": {
         "nationalGrant": { "value": null, "citation": null, "confidence": "低" },
         "prefecturalGrant": { "value": 15273000, "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "8", "sourceText": "県支出金 宮城県移住支援事業負担金12,000千円 移住・定住・交流推進支援事業補助金3,273千円" }, "confidence": "高" },

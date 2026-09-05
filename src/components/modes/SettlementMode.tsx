@@ -41,7 +41,8 @@ export function SettlementMode({
 
   // 選択年度に決算が無い場合(R8など将来年度)は、決算のある直近年度に自動的に切り替える
   const selected = findYearRecord(data, selectedYear);
-  const current = selected?.settlement ? selected : latestYearWithSettlement(data);
+  const current =
+    selected?.settlement?.amount.value != null ? selected : latestYearWithSettlement(data);
   const fellBack = current !== null && current.year !== selectedYear;
 
   if (!current || !current.settlement) {
