@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import type { ViewMode } from "@/types/project";
 
 const MODES: { key: ViewMode; label: string; theme: string; icon: string; barClass: string }[] = [
@@ -20,31 +20,31 @@ const MODE_ACTIVE_BG: Record<ViewMode, string> = {
 };
 
 /**
- * 左サイドバー。事業ページ上では現在のURLクエリ(?mode=)をそのまま書き換え、
- * それ以外のページ(トップ等)ではdefaultProjectIdへ遷移してモードを指定する。
- * モバイルではハンバーガーメニューでオーバーレイ表示する(AppHeaderのメニューボタンと連動はP2)。
+ * 左サイドバー。事業ページ上では親(ProjectPageClient)から渡されるmode/onModeChangeで
+ * その場でモードを切り替える。それ以外のページ(トップ等)ではmodeが渡されないため、
+ * defaultProjectIdへ遷移してモードを指定したURLを開く。
+ *
+ * ここでuseSearchParamsを使わないのは意図的(AppShell.tsxのコメント参照)。
  */
 export function Sidebar({
   currentProjectId,
   defaultProjectId,
+  mode,
+  onModeChange,
 }: {
   currentProjectId?: string;
   defaultProjectId: string | null;
+  mode?: ViewMode;
+  onModeChange?: (mode: ViewMode) => void;
 }) {
   const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const activeMode = (searchParams.get("mode") as ViewMode) || (currentProjectId ? "budget" : null);
-
-  function goToMode(mode: ViewMode) {
-    if (currentProjectId) {
-      const params = new URLSearchParams(searchParams.toString());
-      params.set("mode", mode);
-      router.replace(`${pathname}?${params.toString()}`);
+  function goToMode(m: ViewMode) {
+    if (currentProjectId && onModeChange) {
+      onModeChange(m);
     } else if (defaultProjectId) {
-      router.push(`/projects/${defaultProjectId}/?mode=${mode}`);
+      router.push(`/projects/${defaultProjectId}/?mode=${m}`);
     }
     setMobileOpen(false);
   }
@@ -61,7 +61,7 @@ export function Sidebar({
 
       <p className="mt-3 px-3 text-xs font-semibold text-slate-400">事業を見る視点</p>
       {MODES.map((m) => {
-        const isActive = activeMode === m.key;
+        const isActive = mode === m.key;
         return (
           <button
             key={m.key}

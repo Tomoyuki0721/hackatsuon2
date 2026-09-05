@@ -1,8 +1,4 @@
-"use client";
-
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import type { FiscalYear, ProjectData, ViewMode, DetailLevel } from "@/types/project";
-import { latestYearRecord } from "@/lib/project-helpers";
+import type { DetailLevel, FiscalYear, ProjectData, ViewMode } from "@/types/project";
 import { ProjectHeader } from "./ProjectHeader";
 import { DisplayModeTabs } from "./DisplayModeTabs";
 import { BudgetMode } from "./modes/BudgetMode";
@@ -18,52 +14,47 @@ const MODE_META: Record<ViewMode, { label: string; theme: string; textClass: str
 };
 
 /**
- * 1つの事業を「4つの視点」に切り替えて見るページ本体。モードの切り替え自体はSidebarが担い、
- * ここでは現在のmode/view/yearをURLクエリから読み、対応するモードコンポーネントを描画する。
+ * 1つの事業を「4つの視点」に切り替えて見るページ本体。
+ * mode/view/yearの状態と変更ハンドラは親(ProjectPageClient)から受け取るだけで、
+ * ここではルーティングhookを一切使わない(静的書き出し時の空白化を避けるため)。
  */
-export function ProjectView({ data }: { data: ProjectData }) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  const mode = (searchParams.get("mode") as ViewMode) || "budget";
-  const view = (searchParams.get("view") as DetailLevel) || "normal";
+export function ProjectView({
+  data,
+  mode,
+  view,
+  year,
+  onChangeView,
+  onChangeYear,
+}: {
+  data: ProjectData;
+  mode: ViewMode;
+  view: DetailLevel;
+  year: FiscalYear;
+  onChangeView: (view: DetailLevel) => void;
+  onChangeYear: (year: FiscalYear) => void;
+}) {
   const detail = view === "detail";
-  const yearParam = searchParams.get("year") as FiscalYear | null;
-  const selectedYear = data.years.some((y) => y.year === yearParam)
-    ? (yearParam as FiscalYear)
-    : latestYearRecord(data)?.year ?? data.years[0]?.year;
-
-  function setParams(next: { detail?: boolean; year?: FiscalYear }) {
-    const params = new URLSearchParams(searchParams.toString());
-    if (next.detail !== undefined) params.set("view", next.detail ? "detail" : "normal");
-    if (next.year) params.set("year", next.year);
-    router.replace(`${pathname}?${params.toString()}`);
-  }
-
   const meta = MODE_META[mode];
 
   return (
     <div>
-      <ProjectHeader
-        data={data}
-        selectedYear={selectedYear as FiscalYear}
-        onSelectYear={(year) => setParams({ year })}
-      />
+      <ProjectHeader data={data} selectedYear={year} onSelectYear={onChangeYear} />
 
       <div className="px-4 pt-4 sm:px-6">
         <p className={`text-xs font-bold uppercase tracking-wide ${meta.textClass}`}>{meta.label}</p>
         <h2 className="mt-0.5 text-lg font-bold text-slate-800">「{meta.theme}」</h2>
 
         <div className="mt-3">
-          <DisplayModeTabs mode={mode} detail={detail} onChange={(d) => setParams({ detail: d })} />
+          <DisplayModeTabs
+            mode={mode}
+            detail={detail}
+            onChange={(d) => onChangeView(d ? "detail" : "normal")}
+          />
         </div>
       </div>
 
       <main className="mx-auto max-w-6xl px-4 py-6 sm:px-6">
-        {mode === "budget" && (
-          <BudgetMode data={data} detail={detail} selectedYear={selectedYear as FiscalYear} />
-        )}
+        {mode === "budget" && <BudgetMode data={data} detail={detail} selectedYear={year} />}
         {mode === "settlement" && <SettlementMode data={data} detail={detail} />}
         {mode === "question" && <QuestionMode data={data} detail={detail} />}
         {mode === "citizen" && <CitizenMode data={data} detail={detail} />}
