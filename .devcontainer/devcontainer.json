@@ -1,5 +1,5 @@
 {
-  "name": "Hackatsuon Starter",
+  "name": "気仙沼市 政策・予算ダッシュボード",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "postCreateCommand": "bash .devcontainer/setup.sh",
   "customizations": {
@@ -9,10 +9,10 @@
       }
     }
   },
-  "forwardPorts": [8080],
+  "forwardPorts": [3000],
   "portsAttributes": {
-    "8080": {
-      "label": "Preview",
+    "3000": {
+      "label": "Next.js Preview",
       "onAutoForward": "openPreview"
     }
   }

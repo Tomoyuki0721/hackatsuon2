@@ -63,8 +63,10 @@ export PATH="$HOME/.local/bin:$PATH"
 
 **Q. Pages を有効にしたのに、URLを開くと404**
 - 1〜2分待ってからスーパーリロード(`Ctrl+Shift+R` / `Cmd+Shift+R`)
-- Settings → Pages で Branch が **main / (root)** になっているか確認
-- リポジトリ直下に `index.html` があるか確認(フォルダの中だと表示されません)
+- Settings → Pages で Source が **GitHub Actions** になっているか確認
+  (このリポジトリは `.github/workflows/deploy.yml` が `out/` を公開します。
+  「Deploy from a branch」のままだと Next.js のビルド結果が公開されません)
+- 「Actions」タブで **Deploy to GitHub Pages** が成功しているか確認
 
 **Q. push したのに、公開ページが古いまま**
 - 反映まで1〜2分かかります。待ってからスーパーリロード
