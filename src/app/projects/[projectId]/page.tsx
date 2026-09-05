@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { getAllProjectIds, getProjectData } from "@/lib/data";
+import { AppShell } from "@/components/layout/AppShell";
 import { ProjectView } from "@/components/ProjectView";
 
 export function generateStaticParams() {
@@ -12,8 +13,10 @@ export default function ProjectPage({ params }: { params: { projectId: string } 
   if (!data) notFound();
 
   return (
-    <Suspense fallback={null}>
-      <ProjectView data={data} />
-    </Suspense>
+    <AppShell currentProjectId={params.projectId} defaultProjectId={params.projectId}>
+      <Suspense fallback={null}>
+        <ProjectView data={data} />
+      </Suspense>
+    </AppShell>
   );
 }
