@@ -1,0 +1,194 @@
+{
+  "master": {
+    "projectId": "digital-fisheries-001",
+    "canonicalName": "デジタル水産業戦略拠点事業",
+    "aliases": [],
+    "department": "産業部",
+    "section": "水産課",
+    "policyCategory": "Ⅱ－１ 産業（１）①基幹産業として水産業の振興",
+    "budgetCategory": "6款3項2目(水産業振興費)",
+    "notes": "令和5年度に全国3か所のデジタル水産業戦略拠点(水産庁選定)に選定されたことを受けて本格化した事業。R4年度の資料には本事業の記載がないため、R4のレコードは作成していない(事業が存在しなかったことを断定するのではなく、資料に記載が無いという事実に基づく)。令和5年度は資料自体が存在しない。"
+  },
+  "years": [
+    {
+      "year": "R6",
+      "yearlyLabel": "デジタル水産業戦略拠点事業",
+      "status": "継続",
+      "purpose": {
+        "value": "漁業・水産業が構造的に抱える不確実性を軽減し，持続可能な産業構造の実現，成長産業化，新産業の創出や海業の推進による地方創生を目指し，水産業のデジタル化を推進する。",
+        "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "166", "sourceText": "【目的】漁業・水産業が構造的に抱える不確実性を軽減し，持続可能な産業構造の実現，成長産業化，新産業の創出や海業の推進による地方創生を目指し，水産業のデジタル化を推進する。" },
+        "confidence": "高"
+      },
+      "overview": {
+        "value": "官民連携の地域コンソーシアム「気仙沼市デジタル水産業推進協議会」に対し，デジタル水産業戦略拠点構想の推進に必要な金額を補助する。",
+        "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "166", "sourceText": "【事業内容】官民連携の地域コンソーシアム「気仙沼市デジタル水産業推進協議会」に対し，デジタル水産業戦略拠点構想の推進に必要な金額を補助する。" },
+        "confidence": "高"
+      },
+      "budget": {
+        "initial": { "value": null, "citation": null, "confidence": "低" },
+        "supplementary": { "value": null, "citation": null, "confidence": "低" },
+        "final": { "value": 134638000, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "166", "sourceText": "予算額 134,638,000" }, "confidence": "高" },
+        "previousYear": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "settlement": {
+        "amount": { "value": 44201581, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "166", "sourceText": "決算額 44,201,581" }, "confidence": "高" },
+        "unspent": { "value": null, "citation": null, "confidence": "低" },
+        "executionRate": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "funding": {
+        "nationalGrant": { "value": 16111531, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "166", "sourceText": "国(県)支出金 16,111,531" }, "confidence": "高" },
+        "prefecturalGrant": { "value": 0, "citation": null, "confidence": "中" },
+        "municipalBond": { "value": 0, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "166", "sourceText": "市債 0" }, "confidence": "高" },
+        "other": { "value": 0, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "166", "sourceText": "その他 0" }, "confidence": "高" },
+        "fund": { "value": 0, "citation": null, "confidence": "中" },
+        "generalFund": { "value": 28090050, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "166", "sourceText": "一般財源 28,090,050" }, "confidence": "高" }
+      },
+      "implementation": {
+        "mainSubProjects": [
+          { "value": "気仙沼市デジタル水産業推進協議会の運営(協議会・幹事会・各分科会の開催)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "166", "sourceText": "１　協議会の運営 (1) 協議会，幹事会，各分科会の開催" }, "confidence": "高" },
+          { "value": "デジタル水産業戦略拠点構想の取組に対する調査・研究・実証", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "166", "sourceText": "２　デジタル水産業戦略拠点構想の取組に対する調査・研究・実証" }, "confidence": "高" }
+        ],
+        "newSubProjects": [],
+        "expandedSubProjects": [],
+        "discontinuedSubProjects": []
+      },
+      "outputOutcome": {
+        "outputs": [],
+        "outcomes": [],
+        "kpiAchievementRate": null,
+        "qualitativeOutcome": {
+          "value": "令和5年度に全国で3か所のデジタル水産業戦略拠点(水産庁選定)に選定され、本市水産業が抱える様々な課題に対して、デジタル技術を活用した解決を図るべくデジタル水産業戦略拠点構想を策定。令和6年度より内閣府のデジタル田園都市国家構想交付金の採択を受け、当該拠点構想の実現に向けて、具体的な調査、研究、実証を行い、事業化に係る検討に着手した。",
+          "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "166", "sourceText": "【成果】令和５年度に全国で３か所のデジタル水産業戦略拠点（水産庁選定）に選定され，本市水産業が抱える様々な課題に対して，デジタル技術を活用した解決を図るべくデジタル水産業戦略拠点構想を策定。令和６年度より内閣府のデジタル田園都市国家構想交付金の採択を受け，当該拠点構想の実現に向けて，具体的な調査，研究，実証を行い，事業化に係る検討に着手した。" },
+          "confidence": "高"
+        }
+      },
+      "issuesAndResponse": {
+        "issue": {
+          "value": "当該拠点構想に基づく各取組の社会実装については、導入を目指す分野における制度的・法的課題、デジタル人材の確保、管理運用に向けた体制確保等を踏まえ、漁業者・事業者にとって資する取組となるかどうか、都度検証しながら進めていく必要がある。",
+          "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "166", "sourceText": "【課題】当該拠点構想に基づく各取組の社会実装については，導入を目指す分野における制度的・法的課題，デジタル人材の確保，管理運用に向けた体制確保等を踏まえ，漁業者・事業者にとって資する取組となるかどうか，都度検証しながら進めていく必要がある。" },
+          "confidence": "高"
+        },
+        "nextYearResponse": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "newInitiatives": []
+    },
+    {
+      "year": "R7",
+      "yearlyLabel": "デジタル水産業戦略拠点事業",
+      "status": "継続",
+      "purpose": {
+        "value": "漁業・水産業が構造的に抱える不確実性を軽減し，持続可能な産業構造の実現，成長産業化，新産業の創出や海業の推進による地方創生を目指し，水産業のデジタル化を推進する。",
+        "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "【目的】漁業・水産業が構造的に抱える不確実性を軽減し，持続可能な産業構造の実現，成長産業化，新産業の創出や海業の推進による地方創生を目指し，水産業のデジタル化を推進する。" },
+        "confidence": "高"
+      },
+      "overview": {
+        "value": "官民連携の地域コンソーシアム「気仙沼市デジタル水産業推進協議会」に対し，デジタル水産業戦略拠点構想の推進に必要な金額を補助する。",
+        "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "【事業内容】官民連携の地域コンソーシアム「気仙沼市デジタル水産業推進協議会」に対し，デジタル水産業戦略拠点構想の推進に必要な金額を補助する。" },
+        "confidence": "高"
+      },
+      "budget": {
+        "initial": { "value": null, "citation": null, "confidence": "低" },
+        "supplementary": { "value": null, "citation": null, "confidence": "低" },
+        "final": { "value": 127888000, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "予算額 127,888,000" }, "confidence": "高" },
+        "previousYear": { "value": 134638000, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "166", "sourceText": null }, "confidence": "中" }
+      },
+      "settlement": {
+        "amount": { "value": 79769086, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "決算額 79,769,086" }, "confidence": "高" },
+        "unspent": { "value": null, "citation": null, "confidence": "低" },
+        "executionRate": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "funding": {
+        "nationalGrant": { "value": 39286235, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "国(県)支出金 39,286,235" }, "confidence": "高" },
+        "prefecturalGrant": { "value": 0, "citation": null, "confidence": "中" },
+        "municipalBond": { "value": 0, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "市債 0" }, "confidence": "高" },
+        "other": { "value": 0, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "その他 0" }, "confidence": "高" },
+        "fund": { "value": 0, "citation": null, "confidence": "中" },
+        "generalFund": { "value": 40482851, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "一般財源 40,482,851" }, "confidence": "高" }
+      },
+      "implementation": {
+        "mainSubProjects": [
+          { "value": "協議会の運営(事務局経費) 32,403千円", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "(3) 協議会の運営（事務局経費） 32,403千円" }, "confidence": "高" },
+          { "value": "「気仙沼市水産DX EXPO 2025」の開催 2,410千円", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "(2) 「気仙沼市水産DX EXPO 2025」の開催 2,410千円" }, "confidence": "高" },
+          { "value": "デジタル水産業戦略拠点構想の取組に対する調査・研究・実証 44,957千円", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "２　デジタル水産業戦略拠点構想の取組に対する調査・研究・実証 44,957千円" }, "confidence": "高" }
+        ],
+        "newSubProjects": [],
+        "expandedSubProjects": [],
+        "discontinuedSubProjects": []
+      },
+      "outputOutcome": {
+        "outputs": [
+          { "label": "協議会の開催", "value": { "value": "1回", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "協議会 開催数 １回" }, "confidence": "高" }, "numericValue": 1 },
+          { "label": "幹事会の開催", "value": { "value": "2回", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "幹事会 ２回" }, "confidence": "高" }, "numericValue": 2 },
+          { "label": "分科会の開催", "value": { "value": "10回", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "分科会 10回" }, "confidence": "高" }, "numericValue": 10 }
+        ],
+        "outcomes": [],
+        "kpiAchievementRate": null,
+        "qualitativeOutcome": {
+          "value": "デジタル水産業戦略拠点(令和5年度水産庁選定)として、当該拠点構想の実現に向けて、内閣府のデジタル田園都市国家構想交付金(令和6年度)、第2世代交付金(令和7年度)を財源として、具体的な調査、研究、実証を行ったほか、「気仙沼市水産DX EXPO 2025」を開催し、市内漁業・水産業者を中心に、水産DXの技術・サービスなどの認知普及に努めた。",
+          "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "【成果】デジタル水産業戦略拠点（令和５年度水産庁選定）として，当該拠点構想の実現に向けて，内閣府のデジタル田園都市国家構想交付金（令和６年度），第２世代交付金（令和７年度）を財源として，具体的な調査，研究，実証を行ったほか，「気仙沼市水産DX EXPO 2025」を開催し，市内漁業・水産業者を中心に，水産ＤＸの技術・サービスなどの認知普及に努めた。" },
+          "confidence": "高"
+        }
+      },
+      "issuesAndResponse": {
+        "issue": {
+          "value": "当該拠点構想に基づく各取組の社会実装については、導入を目指す分野における制度的・法的課題、デジタル人材の確保、管理運用に向けた体制確保等を踏まえながら進めていく必要があるほか、水産業のデジタル化に対する地域における理解・機運醸成を同時に推進していく必要がある。",
+          "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": "【課題】当該拠点構想に基づく各取組の社会実装については，導入を目指す分野における制度的・法的課題，デジタル人材の確保，管理運用に向けた体制確保等を踏まえながら進めていく必要があるほか，水産業のデジタル化に対する地域における理解・機運醸成を同時に推進していく必要がある。" },
+          "confidence": "高"
+        },
+        "nextYearResponse": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "newInitiatives": []
+    },
+    {
+      "year": "R8",
+      "yearlyLabel": "デジタル水産業戦略拠点事業",
+      "status": "拡充",
+      "purpose": {
+        "value": "漁業・水産業が構造的に抱える不確実性を軽減し，持続可能な産業構造の実現，成長産業化，新産業の創出や海業の推進による地方創生を目指し，水産業のデジタル化を推進する。",
+        "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "90", "sourceText": "１ 目 的　漁業・水産業が構造的に抱える不確実性を軽減し，持続可能な産業構造の実現，成長産業化，新産業の創出や海業の推進による地方創生を目指し，水産業のデジタル化を推進する。" },
+        "confidence": "高"
+      },
+      "overview": {
+        "value": "令和7年度に引き続き，デジタル水産業戦略拠点構想の推進を目的に，官民連携の地域コンソーシアム「気仙沼市デジタル水産業推進協議会」に対し必要な金額を補助する。",
+        "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "90", "sourceText": "(1) 概要　令和７年度に引き続き，デジタル水産業戦略拠点構想の推進を目的に，官民連携の地域コンソーシアム「気仙沼市デジタル水産業推進協議会」に対し必要な金額を補助する。" },
+        "confidence": "高"
+      },
+      "budget": {
+        "initial": { "value": 226968000, "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "90", "sourceText": "予 算 科 目 ６款 ３項 ２目 水産業振興費　予算額 226,968千円" }, "confidence": "高" },
+        "supplementary": { "value": null, "citation": null, "confidence": "低" },
+        "final": { "value": 226968000, "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "90", "sourceText": "予 算 科 目 ６款 ３項 ２目 水産業振興費　予算額 226,968千円" }, "confidence": "高" },
+        "previousYear": { "value": 127888000, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "171", "sourceText": null }, "confidence": "中" }
+      },
+      "settlement": null,
+      "funding": {
+        "nationalGrant": { "value": 0, "citation": null, "confidence": "中" },
+        "prefecturalGrant": { "value": 0, "citation": null, "confidence": "中" },
+        "municipalBond": { "value": 0, "citation": null, "confidence": "中" },
+        "other": { "value": 0, "citation": null, "confidence": "中" },
+        "fund": { "value": 226968000, "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "90", "sourceText": "３ 財源内訳 繰 入 金　ふるさと応援基金繰入金（産業パッケージ） 226,968千円" }, "confidence": "高" },
+        "generalFund": { "value": 0, "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "90", "sourceText": "３ 財源内訳 繰 入 金　ふるさと応援基金繰入金（産業パッケージ） 226,968千円(財源内訳に一般財源の記載なし)" }, "confidence": "中" }
+      },
+      "implementation": {
+        "mainSubProjects": [
+          { "value": "デジタル水産業戦略拠点構想の実現に向けた調査・研究、実証、システム開発 184,414千円", "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "90", "sourceText": "①デジタル水産業戦略拠点構想の実現に向けた調査・研究，実証，システム開発 184,414千円" }, "confidence": "高" },
+          { "value": "協議会の開催・運営費、事務局支援費等 32,554千円", "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "90", "sourceText": "②同協議会の開催・運営費，事務局支援費等 32,554千円" }, "confidence": "高" },
+          { "value": "地域活性化企業人の活用 10,000千円", "citation": { "sourceDocument": "R8予算説明資料", "sourcePage": "90", "sourceText": "③地域活性化企業人の活用 10,000千円" }, "confidence": "高" }
+        ],
+        "newSubProjects": [],
+        "expandedSubProjects": [],
+        "discontinuedSubProjects": []
+      },
+      "outputOutcome": {
+        "outputs": [],
+        "outcomes": [],
+        "kpiAchievementRate": null,
+        "qualitativeOutcome": null
+      },
+      "issuesAndResponse": {
+        "issue": { "value": null, "citation": null, "confidence": "低" },
+        "nextYearResponse": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "newInitiatives": []
+    }
+  ]
+}

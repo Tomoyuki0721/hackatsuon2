@@ -1,0 +1,228 @@
+{
+  "master": {
+    "projectId": "child-medical-subsidy-001",
+    "canonicalName": "子ども医療費助成事業",
+    "aliases": ["子ども医療費助成事業（市独自補助分）"],
+    "department": "市民生活部",
+    "section": "保険年金課",
+    "policyCategory": "Ⅱ－２ 結婚・子育て（２）①妊娠・出産・子育て支援の充実",
+    "budgetCategory": "3款2項1目(児童福祉総務費)",
+    "notes": "0歳から18歳までの入院・通院に係る医療費の一部負担金を助成する事業。R8年度の予算額は、予算説明資料に本事業単独のナラティブシートが無く、予算説明書の表組みからも事業単位の金額を確実に特定できなかったため計上していない(推測で数値を割り当てない)。なおR8のふるさと応援基金充当事業一覧には、本事業(市独自補助分)への充当額146,176千円の記載がある(R8予算説明資料)。"
+  },
+  "years": [
+    {
+      "year": "R4",
+      "yearlyLabel": "子ども医療費助成事業",
+      "status": "継続",
+      "_note_funding_columns": "R4の財源内訳は、原典PDFのテキスト抽出時に列の対応が一意に定まらなかった。印字されている値は順に 23,975,000 / 30,000,000 / 0 / 111,794,772 で、合計は決算額165,769,772円と一致する。国(県)支出金と一般財源は列見出しとの対応が明確なため信頼度「高」、中間2列(市債・その他)は対応が確定できないため信頼度「低」として記録している。",
+      "purpose": {
+        "value": "子どもの医療費を助成することにより，子どもの適正な医療機会の確保及び子育て家庭における経済的負担の軽減を図る。",
+        "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": "【目的】子どもの医療費を助成することにより，子どもの適正な医療機会の確保及び子育て家庭における経済的負担の軽減を図る。" },
+        "confidence": "高"
+      },
+      "overview": {
+        "value": "0歳から18歳までの入院・通院に係る医療費の一部負担金を助成する。県内医療機関は現物給付(医療機関で受給者証提示により自己負担なし)、県外医療機関は償還払い(自己負担後、市へ申請し助成を受ける)。",
+        "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": "【事業内容】０歳から18歳までの入院・通院に係る医療費の一部負担金を助成する。県内医療機関は現物給付（医療機関で受給者証提示により自己負担なし）。県外医療機関は償還払い" },
+        "confidence": "高"
+      },
+      "budget": {
+        "initial": { "value": null, "citation": null, "confidence": "低" },
+        "supplementary": { "value": null, "citation": null, "confidence": "低" },
+        "final": { "value": 171967000, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": "予算の執行状況 予算額 171,967,000" }, "confidence": "高" },
+        "previousYear": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "settlement": {
+        "amount": { "value": 165769772, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": "決算額 165,769,772" }, "confidence": "高" },
+        "unspent": { "value": null, "citation": null, "confidence": "低" },
+        "executionRate": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "funding": {
+        "nationalGrant": { "value": 23975000, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": "国(県)支出金 23,975,000" }, "confidence": "高" },
+        "prefecturalGrant": { "value": 0, "citation": null, "confidence": "中" },
+        "municipalBond": { "value": 0, "citation": null, "confidence": "低" },
+        "other": { "value": 30000000, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": "決算額の財源内訳(印字順) 23,975,000 30,000,000 0 111,794,772" }, "confidence": "低" },
+        "fund": { "value": 0, "citation": null, "confidence": "中" },
+        "generalFund": { "value": 111794772, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": "一般財源 111,794,772" }, "confidence": "高" }
+      },
+      "implementation": {
+        "mainSubProjects": [
+          { "value": "医療費一部負担金の助成(県内医療機関は現物給付、県外医療機関は償還払い)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": null }, "confidence": "高" }
+        ],
+        "newSubProjects": [],
+        "expandedSubProjects": [],
+        "discontinuedSubProjects": []
+      },
+      "outputOutcome": {
+        "outputs": [
+          { "label": "助成件数(合計)", "value": { "value": "74,865件", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": "合計 6,758 23,075 47,235 51,790 116,070 74,865 163,305" }, "confidence": "高" }, "numericValue": 74865 },
+          { "label": "助成額(合計)", "value": { "value": "163,305千円", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": "合計 …74,865 163,305" }, "confidence": "高" }, "numericValue": 163305 },
+          { "label": "一人当たり助成額", "value": { "value": "24千円", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": "一人当たり助成額 24" }, "confidence": "高" }, "numericValue": 24 }
+        ],
+        "outcomes": [
+          { "label": "受給者数", "value": { "value": "6,684人(令和5年3月31日現在。社会保険等5,846人、市国民健康保険838人)", "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": "受給資格状況 6,684人（令和５年３月31日現在） 保険種別内訳：社会保険等　5,846人，市国民健康保険　838人" }, "confidence": "高" }, "numericValue": 6684 }
+        ],
+        "kpiAchievementRate": null,
+        "qualitativeOutcome": {
+          "value": "子育て家庭に対し医療費の助成を実施することで、子どもの適正な医療機会の確保及び子育て中の家庭の経済的負担の軽減に繋がった。",
+          "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": "【成果】子育て家庭に対し医療費の助成を実施することで，子どもの適正な医療機会の確保及び子育て中の家庭の経済的負担の軽減に繋がった。" },
+          "confidence": "高"
+        }
+      },
+      "issuesAndResponse": {
+        "issue": {
+          "value": "当該制度には国による財政支援がなく、また宮城県の補助の範囲は市町村の実態と乖離しており、制度を継続するための財源の確保が課題となっている。また、現物給付については、医療機会が確保される半面、過剰受診が懸念される。",
+          "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": "【課題】当該制度には国による財政支援がなく，また宮城県の補助の範囲は市町村の実態と乖離しており，制度を継続するための財源の確保が課題となっている。" },
+          "confidence": "高"
+        },
+        "nextYearResponse": {
+          "value": "国・県へ、全国一律の制度を構築し国と地方が一体となった子育て支援を推進していくよう要望を継続する。また、適正受診について啓発していきたい。",
+          "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": "国・県へ，全国一律の制度を構築し国と地方が一体となった子育て支援を推進していくよう要望を継続する。また，現物給付については，医療機会が確保される半面，過剰受診が懸念されることから，適正受診について啓発していきたい。" },
+          "confidence": "高"
+        }
+      },
+      "newInitiatives": []
+    },
+    {
+      "year": "R6",
+      "yearlyLabel": "子ども医療費助成事業",
+      "status": "継続",
+      "purpose": {
+        "value": "子どもの医療費を助成することにより，子どもの適正な医療機会の確保及び子育て家庭における経済的負担の軽減を図る。",
+        "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "【目的】子どもの医療費を助成することにより，子どもの適正な医療機会の確保及び子育て家庭における経済的負担の軽減を図る。" },
+        "confidence": "高"
+      },
+      "overview": {
+        "value": "0歳から18歳までの入院・通院に係る医療費の一部負担金を助成する。県内医療機関は現物給付、県外医療機関は償還払い。県の補助あり(0歳から小学校就学前までのみ対象、所得制限あり、補助率1/2)。",
+        "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "【事業内容】０歳から18歳までの入院・通院に係る医療費の一部負担金を助成する。県内医療機関は現物給付（医療機関で受給者証提示により自己負担なし）。県外医療機関は償還払い" },
+        "confidence": "高"
+      },
+      "budget": {
+        "initial": { "value": null, "citation": null, "confidence": "低" },
+        "supplementary": { "value": null, "citation": null, "confidence": "低" },
+        "final": { "value": 192464000, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "予算額 192,464,000" }, "confidence": "高" },
+        "previousYear": { "value": 171967000, "citation": { "sourceDocument": "R4成果報告書", "sourcePage": "101", "sourceText": null }, "confidence": "中" }
+      },
+      "settlement": {
+        "amount": { "value": 178962975, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "決算額 178,962,975" }, "confidence": "高" },
+        "unspent": { "value": null, "citation": null, "confidence": "低" },
+        "executionRate": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "funding": {
+        "nationalGrant": { "value": 20664000, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "国(県)支出金 20,664,000" }, "confidence": "高" },
+        "prefecturalGrant": { "value": 0, "citation": null, "confidence": "中" },
+        "municipalBond": { "value": 0, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "市債 0" }, "confidence": "高" },
+        "other": { "value": 135673976, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "その他 135,673,976" }, "confidence": "高" },
+        "fund": { "value": 0, "citation": null, "confidence": "中" },
+        "generalFund": { "value": 22624999, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "一般財源 22,624,999" }, "confidence": "高" }
+      },
+      "implementation": {
+        "mainSubProjects": [
+          { "value": "医療費一部負担金の助成(県内医療機関は現物給付、県外医療機関は償還払い。県補助は0歳〜小学校就学前かつ所得制限あり、補助率1/2)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": null }, "confidence": "高" }
+        ],
+        "newSubProjects": [],
+        "expandedSubProjects": [],
+        "discontinuedSubProjects": []
+      },
+      "outputOutcome": {
+        "outputs": [
+          { "label": "助成件数(合計)", "value": { "value": "80,367件", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "合計 6,105 22,530 40,627 57,837 135,674 80,367 176,301" }, "confidence": "高" }, "numericValue": 80367 },
+          { "label": "助成額(合計)", "value": { "value": "176,301千円", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "合計 …80,367 176,301" }, "confidence": "高" }, "numericValue": 176301 },
+          { "label": "一人当たり助成額", "value": { "value": "29千円", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "一人当たり助成額 29" }, "confidence": "高" }, "numericValue": 29 }
+        ],
+        "outcomes": [
+          { "label": "受給者数", "value": { "value": "5,932人(令和7年3月31日現在)", "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "１　助成対象者数　5,932人（令和７年３月31日現在）" }, "confidence": "高" }, "numericValue": 5932 }
+        ],
+        "kpiAchievementRate": null,
+        "qualitativeOutcome": {
+          "value": "子育て家庭に対し医療費の助成を実施することで、子どもの適正な医療機会の確保及び子育て中の家庭の経済的負担の軽減につながった。",
+          "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "【成果】子育て家庭に対し医療費の助成を実施することで，子どもの適正な医療機会の確保及び子育て中の家庭の経済的負担の軽減につながった。" },
+          "confidence": "高"
+        }
+      },
+      "issuesAndResponse": {
+        "issue": {
+          "value": "当該制度に対する国からの財政支援はない。また、宮城県の補助基準は範囲が狭く各市町村が実施する助成事業の実態と乖離していることから、制度を継続するための財源確保が課題となっている。",
+          "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "【課題】当該制度に対する国からの財政支援はない。また，宮城県の補助基準は範囲が狭く各市町村が実施する助成事業の実態と乖離していることから，制度を継続するための財源確保が課題となっている。" },
+          "confidence": "高"
+        },
+        "nextYearResponse": {
+          "value": "今後も引き続き、国へ全国一律の制度を構築するよう要望するとともに、県に対しては補助対象年齢の拡大と所得制限の撤廃について要望していく。",
+          "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": "今後も引き続き，国へ全国一律の制度を構築するよう要望するとともに，県に対しては補助対象年齢の拡大と所得制限の撤廃について要望していく。" },
+          "confidence": "高"
+        }
+      },
+      "newInitiatives": []
+    },
+    {
+      "year": "R7",
+      "yearlyLabel": "子ども医療費助成事業",
+      "status": "継続",
+      "purpose": {
+        "value": "子どもの医療費を助成することにより，子どもの適正な医療機会の確保及び子育て家庭における経済的負担の軽減を図る。",
+        "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "【目的】子どもの医療費を助成することにより，子どもの適正な医療機会の確保及び子育て家庭における経済的負担の軽減を図る。" },
+        "confidence": "高"
+      },
+      "overview": {
+        "value": "0歳から18歳までの入院・通院に係る医療費の一部負担金を助成する。県内医療機関は現物給付、県外医療機関は償還払い。県の補助あり(0歳から小学校就学前までのみ対象、所得制限あり、補助率1/2)。",
+        "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "【事業内容】０歳から18歳までの入院・通院に係る医療費の一部負担金を助成する。県内医療機関は現物給付（医療機関で受給者証提示により自己負担なし）。県外医療機関は償還払い（自己負担後，市へ申請し助成を受ける）。県の補助あり（０歳から小学校就学前までのみ対象，所得制限あり，補助率1/2）。" },
+        "confidence": "高"
+      },
+      "budget": {
+        "initial": { "value": null, "citation": null, "confidence": "低" },
+        "supplementary": { "value": null, "citation": null, "confidence": "低" },
+        "final": { "value": 183536000, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "予算額 183,536,000" }, "confidence": "高" },
+        "previousYear": { "value": 192464000, "citation": { "sourceDocument": "R6成果報告書", "sourcePage": "86", "sourceText": null }, "confidence": "中" }
+      },
+      "settlement": {
+        "amount": { "value": 175741125, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "決算額 175,741,125" }, "confidence": "高" },
+        "unspent": { "value": null, "citation": null, "confidence": "低" },
+        "executionRate": { "value": null, "citation": null, "confidence": "低" }
+      },
+      "funding": {
+        "nationalGrant": { "value": 17822000, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "国(県)支出金 17,822,000" }, "confidence": "高" },
+        "prefecturalGrant": { "value": 0, "citation": null, "confidence": "中" },
+        "municipalBond": { "value": 0, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "市債 0" }, "confidence": "高" },
+        "other": { "value": 138113738, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "その他 138,113,738" }, "confidence": "高" },
+        "fund": { "value": 0, "citation": null, "confidence": "中" },
+        "generalFund": { "value": 19805387, "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "一般財源 19,805,387" }, "confidence": "高" }
+      },
+      "implementation": {
+        "mainSubProjects": [
+          { "value": "医療費一部負担金の助成(県内医療機関は現物給付、県外医療機関は償還払い。県補助は0歳〜小学校就学前かつ所得制限あり、補助率1/2)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": null }, "confidence": "高" }
+        ],
+        "newSubProjects": [],
+        "expandedSubProjects": [],
+        "discontinuedSubProjects": []
+      },
+      "outputOutcome": {
+        "outputs": [
+          { "label": "助成件数(合計)", "value": { "value": "78,114件", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "合計 5,852 19,929 35,022 58,185 138,114 78,114 173,136" }, "confidence": "高" }, "numericValue": 78114 },
+          { "label": "助成額(合計)", "value": { "value": "173,136千円", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "合計 …78,114 173,136" }, "confidence": "高" }, "numericValue": 173136 },
+          { "label": "一人当たり助成額", "value": { "value": "30千円", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "一人当たり助成額 30" }, "confidence": "高" }, "numericValue": 30 }
+        ],
+        "outcomes": [
+          { "label": "受給者数", "value": { "value": "5,671人(令和8年3月31日現在。社会保険等4,989人、市国民健康保険682人)", "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "１　助成対象者数　5,671人（令和８年３月31日現在）保険種別内訳：社会保険等 4,989人 市国民健康保険 682人" }, "confidence": "高" }, "numericValue": 5671 }
+        ],
+        "kpiAchievementRate": null,
+        "qualitativeOutcome": {
+          "value": "子育て世帯の経済的負担を軽減するとともに、子どもの適正な医療機会の確保に寄与した。",
+          "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "【成果】子育て世帯の経済的負担を軽減するとともに，子どもの適正な医療機会の確保に寄与した。" },
+          "confidence": "高"
+        }
+      },
+      "issuesAndResponse": {
+        "issue": {
+          "value": "当該制度に対して国からの財政支援はなく、県補助金はあるものの、補助対象は未就学児で保護者の所得が基準額未満の場合に限られている。県内のすべての自治体で助成対象を18歳の年度末までとし所得制限を撤廃している中、県の補助基準は助成事業の実態と乖離しており、制度を継続するための財源確保が課題となっている。",
+          "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "【課題】当該制度に対して国からの財政支援はなく，県補助金はあるものの，補助対象は未就学児で保護者の所得が基準額未満の場合に限られている。県内のすべての自治体で助成対象を18歳の年度末までとし所得制限を撤廃している中，県の補助基準は助成事業の実態と乖離しており，制度を継続するための財源確保が課題となっている。" },
+          "confidence": "高"
+        },
+        "nextYearResponse": {
+          "value": "例年、国へ全国一律の制度構築について要望するとともに、県に対しては補助対象年齢の拡大と所得制限の撤廃について要望しており、今後も継続していく。",
+          "citation": { "sourceDocument": "R7成果報告書", "sourcePage": "94", "sourceText": "例年，国へ全国一律の制度構築について要望するとともに，県に対しては補助対象年齢の拡大と所得制限の撤廃について要望しており，今後も継続していく。" },
+          "confidence": "高"
+        }
+      },
+      "newInitiatives": []
+    }
+  ]
+}
