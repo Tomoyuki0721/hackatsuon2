@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "vitest run"
+    "test": "vitest run",
+    "extract": "node scripts/extract.mjs",
+    "parse": "node scripts/parse-outcomes.mjs",
+    "match": "node scripts/match-projects.mjs",
+    "validate": "node scripts/validate.mjs"
   },
   "dependencies": {
     "next": "^14.2.5",
