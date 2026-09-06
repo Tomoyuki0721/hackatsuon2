@@ -82,6 +82,8 @@ docs/                 設計ドキュメント
   matching-rules.md     事業名の同定ルール(exact/alias/fuzzy/manual)
   ui-redesign-plan.md   UI設計方針と実装状況
   architecture.md       ホスティング構成の決定記録
+  pipeline.md           PDF→確定データの抽出パイプライン
+scripts/              抽出・マッチング・検証スクリプト
 src/
   app/                ページ(トップ / projects/[projectId])
   components/
@@ -117,10 +119,14 @@ src/
 - 事業データ **5件**: 移住・定住促進事業、結婚支援事業、地域おこし協力隊事業(企画調査費)、
   子ども医療費助成事業、デジタル水産業戦略拠点事業
 
+- 抽出パイプライン(`npm run extract` / `parse` / `match` / `validate`)。
+  検証はCIでも自動実行され、出典の無い数値が公開されないようにしています
+  ([docs/pipeline.md](docs/pipeline.md))
+
 **未実装**
 
 - 6件目以降の事業データ(現状は上記5件のみ)
-- PDFからの抽出スクリプト(現状は手作業で抽出し、出典を確認して登録)
+- 予算書・予算説明資料のパーサ(現状 parse は成果報告書のみ対応)
 - 議会の一般質問・答弁データ(原典資料が未提供のため「未確認」と表示)
 - テスト
 

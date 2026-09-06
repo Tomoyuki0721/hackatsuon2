@@ -9,3 +9,7 @@ next-env.d.ts
 
 # 原本PDF(容量が大きいため、参照用資料としてローカルのみで保持する)
 *.pdf
+
+# 抽出パイプラインの中間生成物(確定データは data/projects/ のみ。docs/pipeline.md 参照)
+data/raw/
+data/candidates/
