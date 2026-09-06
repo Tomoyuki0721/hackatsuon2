@@ -1,0 +1,57 @@
+name: 議会だよりの更新チェック
+
+# 議会だよりは年4回(定例会ごと)の発行なので、月1回の確認で十分。
+# 手動実行(workflow_dispatch)もできる。
+on:
+  schedule:
+    - cron: "0 0 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install poppler-utils
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      - name: Fetch 議会だより
+        run: node scripts/fetch-council.mjs
+
+      - name: Parse 質疑応答
+        run: node scripts/parse-council.mjs | tee /tmp/parse.log
+
+      - name: Summarise
+        if: always()
+        run: |
+          {
+            echo "## 議会だよりの更新チェック"
+            echo ""
+            echo '```'
+            cat /tmp/parse.log || echo "(解析ログなし)"
+            echo '```'
+            echo ""
+            echo "候補データは artifact からダウンロードできます。"
+            echo "内容を確認したうえで data/ に取り込んでください(自動では確定データにしません)。"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload candidates
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: council-candidates
+          path: |
+            data/candidates/
+            data/raw/council/manifest.json
+          if-no-files-found: warn
+          retention-days: 30
