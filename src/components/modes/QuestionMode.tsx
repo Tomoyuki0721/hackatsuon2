@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import type { ProjectData, ProjectYearRecord } from "@/types/project";
+import type { AnswerStatus, CouncilQa } from "@/types/council";
 import {
   sortedYears,
   latestYearWithSettlement,
@@ -30,7 +31,15 @@ type Range = (typeof RANGES)[number];
  * 過去の一般質問・答弁、注目論点、質問案。
  * 詳細モード: ［時系列分析］［課題と対応］［過去答弁］［政策指標］［質問案］のタブ。
  */
-export function QuestionMode({ data, detail }: { data: ProjectData; detail: boolean }) {
+export function QuestionMode({
+  data,
+  detail,
+  councilQa,
+}: {
+  data: ProjectData;
+  detail: boolean;
+  councilQa: CouncilQa[];
+}) {
   const [tab, setTab] = useState<Tab>("時系列分析");
   const [range, setRange] = useState<Range>(5);
 
@@ -99,27 +108,7 @@ export function QuestionMode({ data, detail }: { data: ProjectData; detail: bool
       </SectionCard>
 
       <SectionCard title="過去の一般質問・答弁">
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[520px] text-sm">
-            <thead>
-              <tr className="border-b border-slate-200 text-left text-xs text-slate-500">
-                <th className="py-2 pr-4">年月</th>
-                <th className="py-2 pr-4">質問内容</th>
-                <th className="py-2 pr-4">答弁</th>
-                <th className="py-2 pr-4">その後</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colSpan={4} className="py-4 text-center text-sm text-slate-500">
-                  未確認: 本事業に紐づく一般質問・委員会質疑・議会答弁の原典資料が、現時点で読み込まれていません。
-                  <br />
-                  会議録が提供され次第、答弁とその後の対応状況(実施済/一部実施/継続検討/未確認)を追加します。
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <CouncilQaList items={councilQa} />
       </SectionCard>
 
       <SectionCard title="注目論点" className="border-mode-question/30 bg-orange-50/20">
@@ -149,20 +138,92 @@ export function QuestionMode({ data, detail }: { data: ProjectData; detail: bool
 
           {tab === "時系列分析" && <TimeSeriesTable years={years} />}
           {tab === "課題と対応" && <PolicyTimeline years={years} />}
-          {tab === "過去答弁" && (
-            <div className="rounded-lg border border-slate-300 bg-white p-4 text-sm leading-relaxed text-slate-600">
-              <p className="mb-2 font-semibold text-slate-700">未確認</p>
-              <p>
-                「検討する」「研究する」「協議する」といった答弁のその後を追跡するには、議会会議録が必要です。
-                現時点でプロジェクトに会議録データが無いため、この画面には何も表示していません
-                (推測での記載は行いません)。
-              </p>
-            </div>
-          )}
+          {tab === "過去答弁" && <CouncilQaList items={councilQa} detailed />}
           {tab === "政策指標" && <MetricTable years={years} />}
           {tab === "質問案" && <QuestionDrafts data={data} years={years} bare />}
         </SectionCard>
       )}
+    </div>
+  );
+}
+
+const ANSWER_STATUS_STYLE: Record<AnswerStatus, { className: string; icon: string }> = {
+  実施済: { className: "border-emerald-300 bg-emerald-50 text-emerald-800", icon: "✔" },
+  一部実施: { className: "border-amber-300 bg-amber-50 text-amber-800", icon: "◐" },
+  継続検討: { className: "border-slate-300 bg-slate-50 text-slate-700", icon: "…" },
+  未確認: { className: "border-slate-300 bg-white text-slate-500", icon: "?" },
+};
+
+/**
+ * 議会の質疑応答。出典は議会だより(要旨)であり全文ではないため、原典PDFへのリンクを必ず添える。
+ * 「その後」は原典から確認できたものだけを記し、確認できないものは「未確認」のままにする。
+ */
+function CouncilQaList({ items, detailed = false }: { items: CouncilQa[]; detailed?: boolean }) {
+  if (items.length === 0) {
+    return (
+      <p className="rounded-lg border border-dashed border-slate-300 bg-white p-4 text-sm text-slate-500">
+        この事業に紐づく質疑は、現在取り込んでいる議会だより(第80〜85号)には見当たりませんでした。
+        該当する質疑が別の号や会議録にある可能性があります。
+      </p>
+    );
+  }
+
+  return (
+    <div className="space-y-3">
+      {items.map((qa) => {
+        const status = ANSWER_STATUS_STYLE[qa.answerStatus];
+        return (
+          <article key={qa.id} className="rounded-xl border border-slate-200 bg-white p-4">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="rounded-full bg-mode-question/10 px-2 py-0.5 text-xs font-semibold text-mode-question">
+                {qa.category}
+              </span>
+              <span className="text-xs text-slate-500">
+                {qa.meetingLabel}({qa.session})
+              </span>
+              {qa.speaker && <span className="text-xs text-slate-500">質問: {qa.speaker}</span>}
+              <span
+                className={`ml-auto inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-semibold ${status.className}`}
+              >
+                <span aria-hidden>{status.icon}</span>
+                その後: {qa.answerStatus}
+              </span>
+            </div>
+
+            {qa.heading && <p className="mt-2 text-sm font-bold text-slate-800">{qa.heading}</p>}
+
+            <dl className="mt-2 space-y-2 text-sm">
+              <div>
+                <dt className="text-xs font-semibold text-slate-500">質問</dt>
+                <dd className="text-slate-700">{qa.question}</dd>
+              </div>
+              <div>
+                <dt className="text-xs font-semibold text-slate-500">答弁</dt>
+                <dd className="text-slate-700">{qa.answer ?? "資料記載なし"}</dd>
+              </div>
+              {detailed && qa.statusNote && (
+                <div>
+                  <dt className="text-xs font-semibold text-slate-500">その後の確認状況</dt>
+                  <dd className="text-slate-600">{qa.statusNote}</dd>
+                </div>
+              )}
+            </dl>
+
+            <p className="mt-2 text-xs text-slate-400">
+              出典:{" "}
+              <a
+                href={qa.sourceUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-slate-600"
+              >
+                {qa.sourceDocument}
+              </a>
+              (掲載されているのは質疑の要旨です)
+            </p>
+          </article>
+        );
+      })}
     </div>
   );
 }

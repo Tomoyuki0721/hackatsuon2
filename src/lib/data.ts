@@ -1,8 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { ProjectData } from "@/types/project";
+import type { CouncilQa } from "@/types/council";
 
 const PROJECTS_DIR = path.join(process.cwd(), "data", "projects");
+const COUNCIL_FILE = path.join(process.cwd(), "data", "council", "qa.json");
 
 export interface ProjectSummary {
   projectId: string;
@@ -33,6 +35,19 @@ export function getAllProjects(): ProjectData[] {
   return getAllProjectIds()
     .map((id) => getProjectData(id))
     .filter((p): p is ProjectData => p !== null);
+}
+
+/** 議会の質疑応答。ファイルが無ければ空配列(未整備の状態でも画面が壊れないようにする)。 */
+export function getCouncilQa(): CouncilQa[] {
+  if (!fs.existsSync(COUNCIL_FILE)) return [];
+  return JSON.parse(fs.readFileSync(COUNCIL_FILE, "utf-8")) as CouncilQa[];
+}
+
+/** 指定した事業に紐づく質疑を、新しい号が先に来る順で返す。 */
+export function getCouncilQaForProject(projectId: string): CouncilQa[] {
+  return getCouncilQa()
+    .filter((qa) => qa.relatedProjectIds.includes(projectId))
+    .sort((a, b) => Number(b.issue) - Number(a.issue));
 }
 
 export function getAllProjectSummaries(): ProjectSummary[] {

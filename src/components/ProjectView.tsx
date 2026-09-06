@@ -1,4 +1,5 @@
 import type { DetailLevel, FiscalYear, ProjectData, ViewMode } from "@/types/project";
+import type { CouncilQa } from "@/types/council";
 import { ProjectHeader } from "./ProjectHeader";
 import { DisplayModeTabs } from "./DisplayModeTabs";
 import { BudgetMode } from "./modes/BudgetMode";
@@ -25,6 +26,7 @@ export function ProjectView({
   year,
   onChangeView,
   onChangeYear,
+  councilQa,
 }: {
   data: ProjectData;
   mode: ViewMode;
@@ -32,6 +34,7 @@ export function ProjectView({
   year: FiscalYear;
   onChangeView: (view: DetailLevel) => void;
   onChangeYear: (year: FiscalYear) => void;
+  councilQa: CouncilQa[];
 }) {
   const detail = view === "detail";
   const meta = MODE_META[mode];
@@ -56,7 +59,7 @@ export function ProjectView({
       <main className="mx-auto max-w-6xl px-4 py-6 sm:px-6">
         {mode === "budget" && <BudgetMode data={data} detail={detail} selectedYear={year} />}
         {mode === "settlement" && <SettlementMode data={data} detail={detail} selectedYear={year} />}
-        {mode === "question" && <QuestionMode data={data} detail={detail} />}
+        {mode === "question" && <QuestionMode data={data} detail={detail} councilQa={councilQa} />}
         {mode === "citizen" && <CitizenMode data={data} detail={detail} selectedYear={year} />}
       </main>
     </div>

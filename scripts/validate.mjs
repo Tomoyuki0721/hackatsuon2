@@ -228,6 +228,67 @@ function validateFile(filePath) {
   }
 }
 
+const COUNCIL_FILE = path.join(process.cwd(), "data", "council", "qa.json");
+const ANSWER_STATUSES = ["実施済", "一部実施", "継続検討", "未確認"];
+const QA_CATEGORIES = ["一般質問", "予算・決算審査の質疑", "議案審議"];
+
+/** 議会の質疑応答データの検証。出典URLと紐付け先の事業が実在することを確かめる。 */
+function validateCouncil(knownProjectIds) {
+  if (!fs.existsSync(COUNCIL_FILE)) return 0;
+  const file = "council/qa.json";
+
+  let items;
+  try {
+    items = JSON.parse(fs.readFileSync(COUNCIL_FILE, "utf-8"));
+  } catch (e) {
+    err(file, `JSONとして読めません: ${e.message}`);
+    return 0;
+  }
+  if (!Array.isArray(items)) {
+    err(file, "配列ではありません");
+    return 0;
+  }
+
+  const seenIds = new Set();
+  items.forEach((qa, i) => {
+    const where = qa.id ?? `[${i}]`;
+    if (typeof qa.id !== "string" || qa.id === "") err(file, `${where}: id がありません`);
+    if (seenIds.has(qa.id)) err(file, `${where}: id が重複しています`);
+    seenIds.add(qa.id);
+
+    if (!QA_CATEGORIES.includes(qa.category)) err(file, `${where}: category が不正です (${qa.category})`);
+    if (!ANSWER_STATUSES.includes(qa.answerStatus)) {
+      err(file, `${where}: answerStatus が不正です (${qa.answerStatus})`);
+    }
+    for (const k of ["issue", "session", "meetingLabel", "publishedOn", "question", "sourceDocument"]) {
+      if (typeof qa[k] !== "string" || qa[k] === "") err(file, `${where}: ${k} が空です`);
+    }
+
+    // 出典が辿れないものは載せない
+    if (typeof qa.sourceUrl !== "string" || !qa.sourceUrl.startsWith("https://")) {
+      err(file, `${where}: sourceUrl が https のURLではありません`);
+    }
+
+    // 「実施済」「一部実施」と断定するなら、その根拠を statusNote に書く
+    if (["実施済", "一部実施"].includes(qa.answerStatus) && !qa.statusNote) {
+      err(file, `${where}: answerStatus「${qa.answerStatus}」には根拠を statusNote に書いてください`);
+    }
+
+    if (!Array.isArray(qa.relatedProjectIds)) {
+      err(file, `${where}: relatedProjectIds が配列ではありません`);
+    } else {
+      for (const id of qa.relatedProjectIds) {
+        if (!knownProjectIds.has(id)) err(file, `${where}: 存在しない事業を参照しています (${id})`);
+      }
+      if (qa.relatedProjectIds.length === 0) {
+        warn(file, `${where}: どの事業にも紐づいていません`);
+      }
+    }
+  });
+
+  return items.length;
+}
+
 function main() {
   if (!fs.existsSync(PROJECTS_DIR)) {
     console.error(`事業データのディレクトリがありません: ${PROJECTS_DIR}`);
@@ -242,7 +303,10 @@ function main() {
 
   files.forEach((f) => validateFile(path.join(PROJECTS_DIR, f)));
 
-  console.log(`検証対象: ${files.length}件 (${files.join(", ")})`);
+  const projectIds = new Set(files.map((f) => f.replace(/\.json$/, "")));
+  const qaCount = validateCouncil(projectIds);
+
+  console.log(`検証対象: 事業 ${files.length}件 / 議会質疑 ${qaCount}件`);
 
   if (warnings.length > 0) {
     console.log(`\n警告 ${warnings.length}件:`);

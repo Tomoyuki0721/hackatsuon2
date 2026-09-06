@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import type { DetailLevel, FiscalYear, ProjectData, ViewMode } from "@/types/project";
+import type { CouncilQa } from "@/types/council";
 import { latestYearRecord } from "@/lib/project-helpers";
 import { AppShell } from "./layout/AppShell";
 import { ProjectView } from "./ProjectView";
@@ -20,7 +21,7 @@ const VALID_VIEWS: DetailLevel[] = ["normal", "detail"];
  * (JSが読み込まれるまで画面が空白になる)。この方式ならサーバー・クライアントの初回描画が
  * 一致するため静的HTMLにも実コンテンツが出力され、深いリンク(?mode=...)はマウント後に反映される。
  */
-export function ProjectPageClient({ data }: { data: ProjectData }) {
+export function ProjectPageClient({ data, councilQa }: { data: ProjectData; councilQa: CouncilQa[] }) {
   const router = useRouter();
   const pathname = usePathname();
   const defaultYear = latestYearRecord(data)?.year ?? data.years[0]?.year;
@@ -76,6 +77,7 @@ export function ProjectPageClient({ data }: { data: ProjectData }) {
         year={(year ?? defaultYear) as FiscalYear}
         onChangeView={handleViewChange}
         onChangeYear={handleYearChange}
+        councilQa={councilQa}
       />
     </AppShell>
   );
