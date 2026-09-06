@@ -4,12 +4,12 @@
  *
  *   node scripts/parse-council.mjs [--in data/raw/council] [--out data/candidates]
  *
- * できること・できないことをはっきりさせておく:
- *   ○ 予算審査・決算審査の「主な質疑」— 横書きのQ/A形式で、抽出できる
- *   × 一般質問のページ — PDF上で**縦書き**に組まれており、pdftotext では
- *     文字が列ごとにばらけて復元できない(-layout でも不可)。
- *     一般質問の全文は会議録検索システムにあるが、そちらは robots.txt で
- *     自動取得が禁止されているため、議会事務局への確認が必要。
+ * 議会だよりは横書きと縦書きが混在するため、2種類の抽出結果を使い分ける:
+ *   gikai_N.txt      既定の抽出。予算審査の「主な質疑」(横書きQ/A)を読む
+ *   gikai_N.raw.txt  pdftotext -raw。縦書きの一般質問は、既定や -layout では
+ *                    文字が列ごとにばらけて壊れるが、コンテンツストリーム順
+ *                    (-raw)なら1文字ずつ正しい順序で出てくる。
+ *                    1文字だけの行を連結すれば元の文章に戻る。
  *
  * 出力は候補データ。事業との紐付けはキーワード一致による**提案**であり、
  * 人が確認するまで確定データにはしない。
@@ -108,6 +108,72 @@ function extractQa(text) {
   return blocks;
 }
 
+/**
+ * -raw 出力の復元。縦書きは1行1文字で出てくるので、短い行を連結して文章に戻す。
+ * 空行は段落の区切りとして扱い、そこで一度確定させる。
+ */
+function joinVerticalLines(rawText) {
+  const out = [];
+  let buffer = "";
+  const flush = () => {
+    if (buffer) out.push(buffer);
+    buffer = "";
+  };
+
+  for (const line of rawText.split("\n")) {
+    const t = line.trim();
+    if (t === "") {
+      flush();
+      continue;
+    }
+    if ([...t].length <= 2) buffer += t;
+    else {
+      flush();
+      out.push(t);
+    }
+  }
+  flush();
+  return out;
+}
+
+/**
+ * 一般質問の抽出。復元後の本文は「問…答…問…答…」と続き、
+ * 見出しや質問者名が近くの短い行に現れる。
+ */
+function extractGeneralQuestions(rawText) {
+  const lines = joinVerticalLines(rawText);
+  const results = [];
+
+  lines.forEach((line, index) => {
+    if (!line.includes("問") || !line.includes("答")) return;
+    if ([...line].length < 60) return; // 見出しや注記を拾わない
+
+    const pairs = [...line.matchAll(/問([\s\S]+?)答([\s\S]+?)(?=問|$)/g)];
+    if (pairs.length === 0) return;
+
+    // 前後の短い行から、見出し(記号なしの短文)と質問者名(全角スペース区切りの氏名)を拾う
+    const neighbours = lines.slice(Math.max(0, index - 3), index + 5);
+    const speaker = neighbours.find((l) => /^[^\s]{1,5}[　\s]+[^\s]{1,6}$/.test(l.trim())) ?? null;
+    const heading =
+      neighbours.find(
+        (l) => l !== speaker && [...l].length >= 5 && [...l].length <= 30 && !/[問答。]/.test(l) && !/^\d/.test(l)
+      ) ?? null;
+
+    pairs.forEach(([, q, a], i) => {
+      results.push({
+        heading,
+        speaker: speaker?.replace(/\s+/g, " ").trim() ?? null,
+        question: q.trim(),
+        answer: a.trim(),
+        sequence: i + 1,
+        totalInBlock: pairs.length,
+      });
+    });
+  });
+
+  return results;
+}
+
 function matchProjects(textParts, projects) {
   const haystack = textParts.filter(Boolean).join(" ");
   return projects
@@ -120,7 +186,45 @@ function parseFile(filePath, projects) {
   const info = meetingInfo(raw);
   const blocks = extractQa(raw);
 
-  return blocks.map((b, i) => {
+  // 同じ号の -raw 抽出があれば、縦書きの一般質問も拾う
+  const rawPath = filePath.replace(/\.txt$/, ".raw.txt");
+  const general = fs.existsSync(rawPath)
+    ? extractGeneralQuestions(normalize(fs.readFileSync(rawPath, "utf-8")))
+    : [];
+
+  const generalCandidates = general.map((g, i) => {
+    const review = [];
+    if (!g.speaker) review.push("質問者名を特定できませんでした");
+    if (!g.heading) review.push("見出しを特定できませんでした");
+    if (g.totalInBlock > 1) {
+      review.push(
+        `同じ紙面に${g.totalInBlock}件の質疑が連続しており、質問と答弁の区切りがずれている可能性があります`
+      );
+    }
+
+    const related = matchProjects([g.heading, g.question, g.answer], projects);
+    if (related.length === 0) review.push("既存の事業に紐づきませんでした");
+
+    return {
+      _candidate: true,
+      _review: review,
+      id: `gikai${info.issue ?? "?"}-ippan-${i + 1}`,
+      issue: info.issue,
+      session: info.session,
+      term: info.term,
+      publishedOn: info.publishedOn,
+      category: "一般質問",
+      heading: g.heading,
+      speaker: g.speaker,
+      question: g.question,
+      answer: g.answer,
+      relatedProjects: related,
+      answerStatus: "未確認",
+      sourceDocument: `気仙沼市議会だより 第${info.issue ?? "?"}号`,
+    };
+  });
+
+  const reviewCandidates = blocks.map((b, i) => {
     const review = [];
     if (!b.answer) review.push("答弁(A)を抽出できませんでした。原典で確認してください");
     if (!b.heading) review.push("審査対象の事業名を特定できませんでした");
@@ -146,6 +250,8 @@ function parseFile(filePath, projects) {
       sourceDocument: `気仙沼市議会だより 第${info.issue ?? "?"}号`,
     };
   });
+
+  return [...generalCandidates, ...reviewCandidates];
 }
 
 function main() {
@@ -156,7 +262,10 @@ function main() {
   }
 
   const projects = loadProjectKeywords();
-  const files = fs.readdirSync(args.in).filter((f) => f.endsWith(".txt")).sort();
+  const files = fs
+    .readdirSync(args.in)
+    .filter((f) => f.endsWith(".txt") && !f.endsWith(".raw.txt"))
+    .sort();
   if (files.length === 0) {
     console.error(`テキストがありません: ${args.in}`);
     process.exit(1);
@@ -170,21 +279,23 @@ function main() {
 
   const linked = all.filter((c) => c.relatedProjects.length > 0);
   const needsReview = all.filter((c) => c._review.length > 0);
+  const byCategory = (name) => all.filter((c) => c.category === name).length;
 
   console.log(`議会だより ${files.length}冊 / 事業マスター ${projects.length}件`);
   console.log(`質疑 ${all.length}件を抽出 → ${path.relative(process.cwd(), outFile)}`);
+  console.log(`  内訳: 一般質問 ${byCategory("一般質問")}件 / 予算・決算審査 ${byCategory("予算・決算審査の質疑")}件`);
   console.log(`  既存事業に紐づいた質疑: ${linked.length}件`);
   console.log(`  要確認: ${needsReview.length}件`);
 
   for (const c of linked) {
-    console.log(`\n  [${c.sourceDocument}] ${c.heading ?? "(事業名不明)"}`);
-    console.log(`    Q: ${c.question.slice(0, 60)}…`);
+    console.log(`\n  [${c.category}] ${c.heading ?? "(見出し不明)"}${c.speaker ? ` / ${c.speaker}` : ""}`);
+    console.log(`    問: ${c.question.slice(0, 70)}…`);
     console.log(`    → ${c.relatedProjects.map((p) => p.name).join(", ")}`);
   }
 
   console.log(
-    "\n注: 一般質問のページはPDF上で縦書きに組まれており、テキスト抽出では復元できません。" +
-      "\n    ここで取れるのは予算・決算審査の質疑のみです。"
+    "\n一般質問は縦書きのため pdftotext -raw の出力から復元しています。" +
+      "\n連結の都合で質問と答弁の区切りがずれることがあるため、_review を確認のうえ原典と照合してください。"
   );
 }
 

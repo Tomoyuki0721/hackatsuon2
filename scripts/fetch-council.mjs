@@ -100,9 +100,16 @@ async function main() {
 
     const pdfPath = path.join(args.out, `gikai_${n.issue}.pdf`);
     const txtPath = path.join(args.out, `gikai_${n.issue}.txt`);
+    const rawPath = path.join(args.out, `gikai_${n.issue}.raw.txt`);
 
     const size = await download(n.url, pdfPath);
+
+    // 2通りで抽出する。議会だよりは横書きと縦書きが混在するため:
+    //   既定       … 予算審査の質疑(横書き)がそのまま読める
+    //   -raw       … コンテンツストリーム順。縦書きの一般質問が正しい順序で
+    //                1文字ずつ出てくるので、連結すれば復元できる
     execFileSync("pdftotext", ["-enc", "UTF-8", pdfPath, txtPath], { stdio: "pipe" });
+    execFileSync("pdftotext", ["-enc", "UTF-8", "-raw", pdfPath, rawPath], { stdio: "pipe" });
 
     manifest[n.issue] = { url: n.url, lastmod: n.lastmod, fetchedAt: new Date().toISOString() };
     console.log(`第${n.issue}号 取得 (${size.toLocaleString()} bytes) → ${path.basename(txtPath)}`);
