@@ -229,7 +229,7 @@ function validateFile(filePath) {
 }
 
 const COUNCIL_FILE = path.join(process.cwd(), "data", "council", "qa.json");
-const ANSWER_STATUSES = ["実施済", "一部実施", "継続検討", "未確認"];
+const ANSWER_STATUSES = ["実施済", "一部実施", "継続検討", "実施しない", "未確認"];
 const QA_CATEGORIES = ["一般質問", "予算・決算審査の質疑", "議案審議"];
 
 /** 議会の質疑応答データの検証。出典URLと紐付け先の事業が実在することを確かめる。 */
@@ -260,7 +260,7 @@ function validateCouncil(knownProjectIds) {
     if (!ANSWER_STATUSES.includes(qa.answerStatus)) {
       err(file, `${where}: answerStatus が不正です (${qa.answerStatus})`);
     }
-    for (const k of ["issue", "session", "meetingLabel", "publishedOn", "question", "sourceDocument"]) {
+    for (const k of ["issue", "meetingLabel", "publishedOn", "question", "sourceDocument"]) {
       if (typeof qa[k] !== "string" || qa[k] === "") err(file, `${where}: ${k} が空です`);
     }
 
@@ -270,7 +270,7 @@ function validateCouncil(knownProjectIds) {
     }
 
     // 「実施済」「一部実施」と断定するなら、その根拠を statusNote に書く
-    if (["実施済", "一部実施"].includes(qa.answerStatus) && !qa.statusNote) {
+    if (["実施済", "一部実施", "実施しない"].includes(qa.answerStatus) && !qa.statusNote) {
       err(file, `${where}: answerStatus「${qa.answerStatus}」には根拠を statusNote に書いてください`);
     }
 

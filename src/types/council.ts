@@ -6,7 +6,12 @@
  * 議会だよりに載るのは質疑の要旨であり、全文ではない。
  */
 
-export type AnswerStatus = "実施済" | "一部実施" | "継続検討" | "未確認";
+/**
+ * 答弁のその後。「実施しない」は、市が明確に否定的な答弁をした場合に使う
+ * (「考えていません」等)。これを「未確認」に丸めると、はっきり示された方針が
+ * 見えなくなるため区別する。
+ */
+export type AnswerStatus = "実施済" | "一部実施" | "継続検討" | "実施しない" | "未確認";
 
 export type QaCategory = "一般質問" | "予算・決算審査の質疑" | "議案審議";
 
@@ -15,8 +20,8 @@ export interface CouncilQa {
   category: QaCategory;
   /** 議会だよりの号数 */
   issue: string;
-  /** 第155回定例会 など */
-  session: string;
+  /** 第155回定例会 など。号によっては回次が判別できないため null を許す */
+  session: string | null;
   /** 令和8年6月定例会 など、年月でわかる表記 */
   meetingLabel: string;
   /** 議会だよりの発行日 */

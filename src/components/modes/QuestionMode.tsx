@@ -151,6 +151,7 @@ const ANSWER_STATUS_STYLE: Record<AnswerStatus, { className: string; icon: strin
   実施済: { className: "border-emerald-300 bg-emerald-50 text-emerald-800", icon: "✔" },
   一部実施: { className: "border-amber-300 bg-amber-50 text-amber-800", icon: "◐" },
   継続検討: { className: "border-slate-300 bg-slate-50 text-slate-700", icon: "…" },
+  実施しない: { className: "border-rose-300 bg-rose-50 text-rose-800", icon: "✕" },
   未確認: { className: "border-slate-300 bg-white text-slate-500", icon: "?" },
 };
 
